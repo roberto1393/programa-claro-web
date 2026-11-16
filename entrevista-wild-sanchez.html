@@ -1,105 +1,159 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pedro Sánchez en The Wild Project · Verificador · programa claro</title>
-<meta name="description" content="Las cifras y hechos de la entrevista de The Wild Project a Pedro Sánchez (13-11-2026), contrastados con fuentes oficiales mientras ves el vídeo. Sin opinar.">
-<link rel="icon" href="icono_1024.png">
+<meta name="description" content="Las cifras y hechos de la entrevista de The Wild Project a Pedro Sánchez (13-11-2026), contrastados mientras ves el vídeo, con el documento, la noticia o el vídeo que lo demuestra. Sin opinar.">
+<link rel="icon" href="lupa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--lima:#B8F135;--lima2:#8fc21a;--tx:#0b0b0b;--suave:#5c6156;--fondo:#f6f7f2;--panel:#fff;--borde:rgba(11,11,11,.12);
- --si:#3c8a00;--no:#c4501b;--nc:#8a8f85;--op:#6b4fb3;--mx:#b38f00}
-@media (prefers-color-scheme:dark){:root{--tx:#eef0ea;--suave:#a3a89c;--fondo:#121410;--panel:#1a1d17;--borde:rgba(255,255,255,.12);
- --si:#B8F135;--no:#ff9a62;--nc:#9da294;--op:#b9a2ff;--mx:#f2d45c}}
+:root{--lima:#B8F135;--lima-tx:#3f6f00;--tx:#16181a;--suave:#64686d;--fondo:#f3f3ef;--card:#fff;--hundido:#f7f7f4;--borde:#e4e4de;--sombra:0 1px 2px rgba(16,18,20,.05),0 8px 24px rgba(16,18,20,.06);
+ --si:#1f9d55;--no:#d9532b;--nc:#868b91;--op:#7a5bd6;--mx:#c99400;--marca:rgba(184,241,53,.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lima-tx:#B8F135;--tx:#eceef0;--suave:#9ea3a8;--fondo:#0e0f11;--card:#17191c;--hundido:#1d2023;--borde:#2a2d31;--sombra:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
+ --si:#4cc985;--no:#ff8a63;--nc:#9ba0a6;--op:#ab95ff;--mx:#f0c43c;--marca:rgba(184,241,53,.35)}}
+:root[data-theme="dark"]{--lima-tx:#B8F135;--tx:#eceef0;--suave:#9ea3a8;--fondo:#0e0f11;--card:#17191c;--hundido:#1d2023;--borde:#2a2d31;--sombra:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
+ --si:#4cc985;--no:#ff8a63;--nc:#9ba0a6;--op:#ab95ff;--mx:#f0c43c;--marca:rgba(184,241,53,.35)}
 *{box-sizing:border-box}html,body{margin:0}
-body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tx);background:var(--fondo)}
-a{color:inherit}
-/* barra superior */
-.barra{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:0 20px;height:56px;background:var(--lima);color:#0b0b0b}
-.barra a{text-decoration:none;font-weight:700;font-size:15px}.barra .marca-web{font-weight:800}
-.barra nav{display:flex;gap:20px;justify-content:center}.barra nav a{padding:16px 0;border-bottom:3px solid transparent;opacity:.6}
-.barra nav a.act{opacity:1;border-bottom-color:#0b0b0b}.barra .der{justify-self:end}
+body{font:15.5px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tx);background:var(--fondo);-webkit-font-smoothing:antialiased}
+a{color:inherit}button{font:inherit;color:inherit}
+.card{background:var(--card);border:1px solid var(--borde);border-radius:18px;box-shadow:var(--sombra)}
+/* cabecera */
+.barra{position:sticky;top:0;z-index:20;height:60px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:0 24px;
+ background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--borde)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.01em}
+.logo img{width:34px;height:34px;border-radius:50%}
+.chip{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--hundido);border:1px solid var(--borde);color:var(--suave)}
+.barra nav{display:flex;gap:4px;background:var(--hundido);border:1px solid var(--borde);padding:4px;border-radius:99px}
+.barra nav a{text-decoration:none;font-weight:600;font-size:14px;padding:6px 14px;border-radius:99px;color:var(--suave)}
+.barra nav a.act{background:var(--card);color:var(--tx);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.der{justify-self:end;font-size:14px;font-weight:600;text-decoration:none;color:var(--suave)}.der:hover{color:var(--tx)}
 /* rejilla */
-.todo{max-width:1440px;margin:0 auto;padding:22px 20px 40px;display:grid;gap:0 28px;grid-template-columns:minmax(0,1fr) 400px;align-items:start}
-.todo>section{grid-column:1;grid-row:1}.todo>.caps{grid-column:1;grid-row:2}.todo>.panel{grid-column:2;grid-row:1/span 2}
-@media (max-width:1000px){.todo{grid-template-columns:1fr;padding:14px 14px 30px;gap:18px}.todo>section,.todo>.caps,.todo>.panel{grid-column:1;grid-row:auto}.todo>.panel{order:2}.todo>.caps{order:3}.barra .txt{display:none}.barra{padding:0 14px}}
-.cand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 14px}
-.cand h1{font-size:clamp(34px,5.4vw,68px);line-height:1;letter-spacing:-.03em;margin:0;font-weight:800}
-.partido{font-weight:800;font-size:14px;padding:4px 9px;border-radius:6px;background:var(--tx);color:var(--fondo)}
-.sub{color:var(--suave);font-size:14.5px;margin:0 0 14px;max-width:860px}
-.video{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000}.video>div,.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media (max-width:1000px){.fijo{position:sticky;top:56px;z-index:10;background:var(--fondo);margin:0 -14px;padding:6px 14px 0}}
+.todo{max-width:1440px;margin:0 auto;padding:28px 24px 48px;display:grid;gap:20px 28px;grid-template-columns:minmax(0,1fr) 410px;align-items:start}
+.todo>section{grid-column:1;grid-row:1}.todo>.expl{grid-column:1;grid-row:2}.todo>.caps{grid-column:1;grid-row:3}.todo>.panel{grid-column:2;grid-row:1/span 3}
+@media (max-width:1000px){.todo{grid-template-columns:1fr;padding:16px 16px 32px;gap:16px}.todo>*{grid-column:1!important;grid-row:auto!important}
+ .todo>.expl{order:2}.todo>.panel{order:3}.todo>.caps{order:4}.logo .txt,.chip{display:none}.barra{padding:0 16px}.der{font-size:13px}}
+.cand{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px}
+.cand h1{font-size:clamp(30px,4.4vw,52px);line-height:1.05;letter-spacing:-.035em;margin:0;font-weight:800}
+.partido{font-weight:700;font-size:13px;padding:4px 10px;border-radius:99px;background:var(--tx);color:var(--card)}
+.sub{color:var(--suave);font-size:14.5px;margin:0 0 16px;max-width:860px}
+.video{position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;background:#000;box-shadow:var(--sombra)}.video>div,.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:1000px){.fijo{position:sticky;top:60px;z-index:10;background:var(--fondo);margin:0 -16px;padding:8px 16px 2px}}
 /* línea de tiempo */
-.linea{position:relative;height:50px;margin-top:8px;cursor:pointer}
-.eje{position:absolute;left:0;right:0;top:34px;height:2px;background:var(--borde)}
-.hecho{position:absolute;left:0;top:34px;height:2px;background:var(--lima2);width:0}
-.cab{position:absolute;top:18px;width:2px;height:30px;background:var(--tx);left:0}
-.tick{position:absolute;top:22px;width:4px;height:16px;margin-left:-2px;border-radius:2px;border:0;padding:0;cursor:pointer}
-.tick:hover,.tick.act{height:22px;top:19px;width:6px;margin-left:-3px}
-.tick.si{background:var(--si)}.tick.no{background:var(--no)}.tick.nc{background:var(--nc)}.tick.op{background:var(--op)}.tick.mx{background:var(--mx)}
-.num{position:absolute;top:2px;font-size:11px;color:var(--suave);transform:translateX(-50%);pointer-events:none}
-.globo{position:absolute;bottom:52px;transform:translateX(-50%);background:var(--tx);color:var(--fondo);font-size:12.5px;padding:4px 9px;border-radius:7px;white-space:nowrap;pointer-events:none;display:none;z-index:4}
-.reloj{display:flex;justify-content:space-between;font-size:12.5px;color:var(--suave);margin-top:-4px}
+.linea{position:relative;height:50px;margin-top:6px;cursor:pointer}
+.eje{position:absolute;left:0;right:0;top:32px;height:4px;border-radius:2px;background:var(--borde)}
+.hecho{position:absolute;left:0;top:32px;height:4px;border-radius:2px;background:var(--lima);width:0}
+.cab{position:absolute;top:24px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--tx);border:2px solid var(--card);left:0;top:28px;box-shadow:0 0 0 1px var(--borde)}
+.tick{position:absolute;top:22px;width:4px;height:12px;margin-left:-2px;border-radius:2px;border:0;padding:0;cursor:pointer;transition:height .15s,top .15s}
+.tick:hover,.tick.act{height:20px;top:18px}
+.tick.si,.punto.si{background:var(--si)}.tick.no,.punto.no{background:var(--no)}.tick.nc,.punto.nc{background:var(--nc)}.tick.op,.punto.op{background:var(--op)}.tick.mx,.punto.mx{background:var(--mx)}
+.num{position:absolute;top:0;font-size:11px;font-weight:600;color:var(--suave);transform:translateX(-50%);pointer-events:none}
+.globo{position:absolute;bottom:50px;transform:translateX(-50%);background:var(--tx);color:var(--card);font-size:12.5px;padding:5px 10px;border-radius:8px;white-space:nowrap;pointer-events:none;display:none;z-index:4}
+.reloj{display:flex;justify-content:space-between;font-size:12.5px;color:var(--suave);margin-top:-6px;gap:10px}
+/* explicación del momento */
+.expl{padding:22px 24px}
+.ecab{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--suave);font-weight:600}
+.vivo{display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:700}
+.vivo i{width:8px;height:8px;border-radius:50%;background:var(--lima);box-shadow:0 0 0 3px var(--marca)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid currentColor}
+.expl h2{font-size:clamp(20px,2.2vw,26px);line-height:1.25;letter-spacing:-.02em;margin:10px 0 8px}
+.expl .dijo{font-size:14.5px;color:var(--suave);margin:0 0 6px}
+.expl p{margin:6px 0;max-width:820px}
+.pruebas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px}
+.prueba{border:1px solid var(--borde);border-radius:14px;background:var(--hundido);overflow:hidden;display:flex;flex-direction:column}
+.pcab{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:12.5px;font-weight:600;color:var(--suave);border-bottom:1px solid var(--borde)}
+.pcab .tipo{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--tx)}
+.pcuerpo{padding:14px 16px;flex:1}
+.papel{font:16px/1.6 "Source Serif 4",Georgia,serif;background:var(--card);border:1px solid var(--borde);border-radius:8px;padding:14px 16px;position:relative}
+.papel::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:2px;background:var(--lima)}
+mark{background:var(--marca);color:inherit;padding:1px 2px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.ntit{font-weight:700;font-size:17px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+.pie-p{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid var(--borde);font-size:13px}
+.ir{font-weight:700;text-decoration:none;color:var(--lima-tx)}.ir:hover{text-decoration:underline}
+.vmini{position:relative;padding-top:56.25%;border-radius:8px;overflow:hidden;background:#000}.vmini iframe,.vmini button{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vmini button{cursor:pointer;background:#000 center/cover;display:grid;place-items:center}
+.vmini button span{width:58px;height:58px;border-radius:50%;background:rgba(0,0,0,.65);display:grid;place-items:center;color:#fff;font-size:22px}
+.vcita{font:italic 15px/1.5 "Source Serif 4",Georgia,serif;margin:10px 0 0}
+.graf .fila{display:grid;grid-template-columns:110px 1fr 54px;gap:10px;align-items:center;font-size:13.5px;margin:7px 0}
+.graf .bar{height:12px;border-radius:6px;background:var(--borde);overflow:hidden}.graf .bar i{display:block;height:100%;background:var(--nc);border-radius:6px}
+.graf .fila.on .bar i{background:var(--lima)}.graf .fila.on{font-weight:700}
+.gnota{font-size:12.5px;color:var(--suave);margin-top:8px}
+.cifra{font-size:52px;font-weight:800;letter-spacing:-.04em;line-height:1}.cifra+div{color:var(--suave)}
+.vacio{color:var(--suave);font-size:14.5px}
 /* capítulos */
-.caps{margin-top:16px;border-top:1px solid var(--borde)}@media (max-width:1000px){.caps{margin-top:0}}
-.caps button{all:unset;display:grid;grid-template-columns:72px 1fr;gap:10px;width:100%;padding:10px 2px;border-bottom:1px solid var(--borde);cursor:pointer;font-size:15px;color:var(--suave)}
-.caps button span:first-child{font:12.5px ui-monospace,monospace;padding-top:2px}
-.caps button.act{color:var(--tx);font-weight:600}.caps button:hover{color:var(--tx)}
+.caps{padding:8px 10px}.caps h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin:10px 12px 4px}
+.caps button{all:unset;display:grid;grid-template-columns:70px 1fr;gap:10px;width:100%;box-sizing:border-box;padding:9px 12px;border-radius:10px;cursor:pointer;font-size:14.5px;color:var(--suave)}
+.caps button span:first-child{font:600 12.5px ui-monospace,monospace;padding-top:2px}
+.caps button.act{color:var(--tx);font-weight:600;background:var(--hundido)}.caps button:hover{color:var(--tx);background:var(--hundido)}
 /* panel derecho */
-.panel{position:sticky;top:72px;max-height:calc(100vh - 88px);display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--borde);border-radius:14px;overflow:hidden}
-@media (max-width:1000px){.panel{position:static;max-height:none}}
-.phead{padding:16px 18px 0}
-.etq{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);display:flex;justify-content:space-between;font-weight:700}
+.panel{position:sticky;top:80px;max-height:calc(100vh - 96px);display:flex;flex-direction:column;overflow:hidden}
+@media (max-width:1000px){.panel{position:static;max-height:none}.lista{max-height:70vh}}
+.phead{padding:18px 18px 0}
+.etq{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);display:flex;justify-content:space-between;align-items:center;font-weight:700}
+.seguir{display:inline-flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:600}
+.seguir input{appearance:none;width:34px;height:20px;border-radius:99px;background:var(--borde);position:relative;cursor:pointer;margin:0;transition:background .2s}
+.seguir input::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .2s;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+.seguir input:checked{background:var(--tx)}.seguir input:checked::after{left:16px;background:var(--card)}
 .resumen{font-size:13.5px;color:var(--suave);margin:8px 0 10px}
-.barras{display:flex;height:5px;border-radius:3px;overflow:hidden;gap:2px;margin-bottom:12px}.barras i{display:block}
-.filtros{display:flex;flex-wrap:wrap;gap:4px 14px;padding-bottom:10px;border-bottom:1px solid var(--borde)}
-.filtros button{all:unset;cursor:pointer;font-size:14px;color:var(--suave);padding:3px 0;border-bottom:2px solid transparent}
-.filtros button[aria-pressed=true]{color:var(--tx);border-bottom-color:var(--tx)}
-.punto{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:1px}
-.punto.si{background:var(--si)}.punto.no{background:var(--no)}.punto.nc{background:var(--nc)}.punto.op{background:var(--op)}.punto.mx{background:var(--mx)}
-.lista{overflow:auto;padding:0 18px 10px;flex:1}
-.mom{all:unset;display:block;width:100%;padding:12px 4px;border-bottom:1px solid var(--borde);cursor:pointer;border-radius:8px}
-.mom:hover{background:rgba(184,241,53,.12)}.mom.act{background:rgba(184,241,53,.28)}
+.barras{display:flex;height:6px;border-radius:3px;overflow:hidden;gap:2px;margin-bottom:12px}.barras i{display:block}
+.filtros{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:12px;border-bottom:1px solid var(--borde)}
+.filtros button{cursor:pointer;font-size:13px;font-weight:500;color:var(--suave);padding:4px 10px;border-radius:99px;border:1px solid var(--borde);background:transparent}
+.filtros button[aria-pressed=true]{color:var(--card);background:var(--tx);border-color:var(--tx)}
+.punto{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+.lista{overflow:auto;padding:6px 10px 10px;flex:1}
+.mom{all:unset;display:block;width:100%;box-sizing:border-box;padding:12px 10px;border-radius:12px;cursor:pointer;margin:2px 0}
+.mom:hover{background:var(--hundido)}.mom.act{background:var(--hundido);box-shadow:inset 3px 0 0 var(--lima)}
 .mom .l1{font-size:12.5px;color:var(--suave);display:flex;gap:10px;align-items:center}
 .ver{font-weight:700}.ver.si{color:var(--si)}.ver.no{color:var(--no)}.ver.nc{color:var(--nc)}.ver.op{color:var(--op)}.ver.mx{color:var(--mx)}
-.mom .ctx{font-size:12px;color:var(--suave);margin:3px 0 2px}.mom .dijo{font-size:15.5px;font-weight:500}
-.quien{font-size:11px;font-weight:800;padding:0 6px;border-radius:4px;background:var(--borde)}
-/* ficha */
-.ficha{overflow:auto;padding:14px 18px 20px;flex:1;display:none}
-.volver{all:unset;cursor:pointer;font-size:13.5px;color:var(--suave)}.volver:hover{color:var(--tx)}
-.ficha h2{font-size:22px;margin:10px 0 6px;display:flex;align-items:center;gap:8px}
+.mom .ctx{font-size:12.5px;color:var(--suave);margin:3px 0 2px}.mom .dijo{font-size:15px;font-weight:600;line-height:1.35}
+.quien{font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:99px;background:var(--borde)}
+.ficha{overflow:auto;padding:14px 20px 22px;flex:1;display:none}
+.ficha.nueva{animation:entra .45s ease}@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.volver{all:unset;cursor:pointer;font-size:13.5px;font-weight:600;color:var(--suave)}.volver:hover{color:var(--tx)}
+.ficha h2{font-size:21px;margin:12px 0 6px;display:flex;align-items:center;gap:8px;letter-spacing:-.01em}
 .ficha .ctx{font-size:13.5px;color:var(--suave)}
-.salto{all:unset;cursor:pointer;font-size:13.5px;font-weight:700;display:inline-block;margin-top:6px;border-bottom:2px solid var(--lima2)}
+.salto{cursor:pointer;font-size:13px;font-weight:700;display:inline-flex;gap:6px;align-items:center;margin-top:8px;padding:6px 12px;border-radius:99px;border:1px solid var(--borde);background:var(--hundido)}
+.salto:hover{border-color:var(--tx)}
 .bloque{margin-top:18px;padding-top:14px;border-top:1px solid var(--borde)}
-.cita{font-size:20px;line-height:1.35;font-weight:600;margin:6px 0 4px}
-.titular{font-size:19px;line-height:1.35;font-weight:700;margin:6px 0 8px}
-.ficha p{font-size:15px;margin:6px 0}
-.fuente{display:block;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--borde);font-size:14.5px}
-.fuente small{display:block;color:var(--suave);font-size:12.5px;margin-top:2px}
-.nota{display:inline-block;font-size:11.5px;font-weight:800;padding:0 6px;border-radius:5px;background:var(--tx);color:var(--fondo);margin-right:4px}.nota.b{background:var(--nc);color:#fff}
-/* aviso */
-.aviso{position:fixed;right:22px;top:68px;transform:translateX(calc(100% + 40px));transition:transform .35s;z-index:30;background:var(--tx);color:var(--fondo);
- border-radius:14px;padding:12px 16px;max-width:min(560px,92vw);box-shadow:0 10px 30px rgba(0,0,0,.25);cursor:pointer;font-size:14.5px}
-.aviso.ver-aviso{transform:none}
-@media (max-width:1000px){.aviso{top:auto;bottom:14px;right:4vw;transform:translateY(160%)}}.aviso b{color:var(--lima)}
-.pie{max-width:1440px;margin:0 auto;padding:0 20px 40px;font-size:13.5px;color:var(--suave)}.pie a{color:var(--tx)}
+.cita{font:600 19px/1.4 "Source Serif 4",Georgia,serif;margin:8px 0 4px}
+.titular{font-size:18px;line-height:1.35;font-weight:700;margin:6px 0 8px}
+.ficha p{font-size:14.5px;margin:6px 0}
+.fuente{display:block;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--borde);font-size:14px;font-weight:500}
+.fuente small{display:block;color:var(--suave);font-size:12.5px;margin-top:2px;font-weight:400}
+.nota{display:inline-grid;place-items:center;min-width:20px;font-size:11px;font-weight:800;padding:1px 6px;border-radius:6px;background:var(--tx);color:var(--card);margin-right:6px}.nota.b{background:var(--nc);color:#fff}
+.abajo{font-size:13px;font-weight:600;color:var(--lima-tx);cursor:pointer;background:none;border:0;padding:0;margin-top:8px}
+/* pie */
+.pie{background:#111315;color:#d9dcdf;margin-top:24px}
+.pie>div{max-width:1440px;margin:0 auto;padding:36px 24px 30px;display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+@media (max-width:760px){.pie>div{grid-template-columns:1fr;padding:28px 16px}}
+.pie .logo{color:#fff;font-size:18px}.pie p{font-size:13.5px;color:#9ea3a8;margin:12px 0 0;max-width:620px}
+.pie h4{margin:0 0 12px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9ea3a8}
+.redes{display:flex;flex-wrap:wrap;gap:10px}
+.redes a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:600;padding:9px 14px;border-radius:12px;background:#1d2023;border:1px solid #2a2d31;color:#fff;transition:background .15s,border-color .15s}
+.redes a:hover{background:#262a2e;border-color:var(--lima)}.redes svg{width:18px;height:18px;fill:currentColor}
+.legal{border-top:1px solid #23262a;font-size:12.5px;color:#8a8f94;max-width:1440px;margin:0 auto;padding:16px 24px 26px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.legal a{color:#c9cdd1}
 </style></head>
 <body>
-<div class="barra"><a href="index.html" class="marca-web">← 🔍 <span class="txt">programa claro</span></a>
+<header class="barra"><a href="index.html" class="logo"><img src="lupa.png" alt=""><span class="txt">programa claro</span><span class="chip">Verificador</span></a>
  <nav><a href="entrevista-wild-sanchez.html" class="act">Pedro Sánchez</a></nav>
- <a class="der" href="verificador-metodo.html">Método</a></div>
+ <a class="der" href="verificador-metodo.html">Método</a></header>
 
-<div class="todo">
+<main class="todo">
  <section>
   <div class="cand"><h1>Pedro Sánchez</h1><span class="partido">PSOE</span></div>
-  <p class="sub">Entrevista de Jordi Wild en <a href="https://www.youtube.com/@TheWildProject">The Wild Project</a> (13-11-2026). Cada marca de la línea es un dato contrastado: tócala y mira la fuente. Mientras ves el vídeo, te avisamos cuando se dice uno.</p>
+  <p class="sub">Entrevista de Jordi Wild en <a href="https://www.youtube.com/@TheWildProject">The Wild Project</a> (13-11-2026). Dale al play: cada vez que se diga un dato, el panel lo abre y abajo verás por qué coincide o no, con el documento, la noticia o el vídeo que lo demuestra.</p>
   <div class="fijo">
    <div class="video"><div id="yt"></div></div>
    <div class="linea" id="linea"><div class="eje"></div><div class="hecho" id="hecho"></div><div id="ticks"></div><div class="cab" id="cab"></div><div class="globo" id="globo"></div></div>
    <div class="reloj"><span id="capact">Inicio</span><span id="reloj">0:00 / 1:51:50</span></div>
   </div>
  </section>
- <div class="caps" id="caps"></div>
 
- <aside class="panel" id="panel">
+ <article class="expl card" id="expl" aria-live="polite"></article>
+
+ <nav class="caps card" id="caps" aria-label="Capítulos"></nav>
+
+ <aside class="panel card" id="panel">
   <div class="phead">
-   <div class="etq"><span>Momentos</span><span id="ncomp"></span></div>
+   <div class="etq"><span>Momentos · <span id="ncomp"></span></span><label class="seguir"><input type="checkbox" id="seguir" checked> Seguir el vídeo</label></div>
    <div class="resumen" id="resumen"></div>
    <div class="barras" id="barras"></div>
    <div class="filtros" id="filtros"></div>
@@ -107,44 +161,94 @@ a{color:inherit}
   <div class="lista" id="lista"></div>
   <div class="ficha" id="ficha"></div>
  </aside>
-</div>
-<div class="aviso" id="aviso"></div>
-<div class="pie">La entrevista es de Jordi Wild y The Wild Project: el vídeo está incrustado de su canal y cada reproducción cuenta para ellos. Esta página no tiene publicidad. «programa claro» no está vinculado a ningún partido. ¿Ves un error o tienes una fuente oficial para algo que no hemos podido comprobar? Escríbenos en los comentarios de nuestros vídeos y lo corregimos aquí, con fecha. · <a href="verificador-metodo.html">Método y fuentes</a> · Actualizado el 16-11-2026</div>
+</main>
+
+<footer class="pie">
+ <div>
+  <div><a class="logo" href="index.html"><img src="lupa.png" alt="">programa claro</a>
+   <p>Lo que proponen los partidos y lo que se dice en campaña, con su fuente y sin opinar. La entrevista es de Jordi Wild y The Wild Project: el vídeo está incrustado de su canal y cada reproducción cuenta para ellos. Esta página no tiene publicidad y «programa claro» no está vinculado a ningún partido. ¿Ves un error o tienes una fuente oficial para algo que no hemos podido comprobar? Escríbenos en los comentarios de nuestros vídeos y lo corregimos aquí, con fecha.</p></div>
+  <div><h4>Síguenos</h4><div class="redes">
+   <a href="https://www.youtube.com/channel/UCjx-MwqVBdIdPOQSwpDtGxA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12c0 1.6.2 3.2.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.3-1.6.5-3.2.5-4.8s-.2-3.2-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>YouTube</a>
+   <a href="https://www.instagram.com/programa.claro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>Instagram</a>
+   <a href="https://www.tiktok.com/@programa.claro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a5 5 0 0 1-3.9-4.4V2h-3.4v13.5a2.9 2.9 0 1 1-2-2.7V9.3a6.3 6.3 0 1 0 5.4 6.2V8.7a8.3 8.3 0 0 0 4.9 1.6V6.9l-1-.2z"/></svg>TikTok</a>
+   <a href="https://www.facebook.com/profile.php?id=61595611345164" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>Facebook</a>
+  </div></div>
+ </div>
+ <div class="legal"><span>Comprobado el 14, 16 y 17-11-2026</span><a href="verificador-metodo.html">Método y fuentes</a><a href="index.html">Inicio</a><a href="privacidad.html">Privacidad</a></div>
+</footer>
 
 <script>
-const VID='mStOFBvToUI', COMPROBADO='14 y 16-11-2026';
+const VID='mStOFBvToUI', COMPROBADO='14, 16 y 17-11-2026';
 const ET={si:'Coincide con',no:'No coincide con',nc:'No se puede comprobar',op:'Opinión/promesa: no se contrasta',mx:'Depende de la fuente'};
 const CAP=[[0,'Presentación y formato'],[218,'Por qué quiere seguir en el Gobierno'],[455,'Insultos y crispación'],[846,'Trenes: accidentes y mantenimiento'],[1845,'Crisis de Ceuta y Marruecos'],[3090,'Inmigración, integración y natalidad'],[4040,'Ábalos, Koldo y casos judiciales'],[4901,'SEPI, Plus Ultra y Zapatero'],[5074,'Vivienda'],[5730,'Hemeroteca: indultos, amnistía, ley mordaza'],[6440,'Promesas cumplidas y alegato final']];
-// e: [[clave, nota, a quién se refiere]] · f: [[texto, url, tipo, nota]]
+// e: [[clave, nota, a quién se refiere]] · pr: pruebas → doc (x = [antes, resaltado, después]) | not (noticia) | vid (v, a-b en segundos) | graf (filas) | cifra
 const D=[
-{t:1098,q:'S',ctx:'Jordi pregunta por la seguridad de las vías tras los accidentes.',dijo:'«…de 2026 a 2030 […] vamos a invertir 19.000 millones de euros en el mantenimiento y la seguridad de las vías»',corto:'19.000 millones de 2026 a 2030 para las vías',e:[['op']],tit:'Es una inversión prometida',p:['Es un compromiso de gasto futuro: no se contrasta.'],f:[]},
-{t:1857,q:'S',ctx:'Jordi pregunta qué sabía el Gobierno antes de la entrada en Ceuta.',dijo:'«Los más de 80.000 que el 30 y el 31 de julio entraron en Ceuta»',corto:'Más de 80.000 entraron el 30 y 31 de julio',e:[['no','B']],tit:'Interior habló de 72.000',p:['El ministro del Interior cifró en 72.000 las personas que entraron en Ceuta el 30 de julio, según Infobae (5-8-2026).','No hemos encontrado la cifra en una publicación oficial.'],f:[['El número de fallecidos durante la entrada masiva a Ceuta se eleva a 141','https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/','Prensa · Infobae · 5-8-2026','B']]},
-{t:2114,q:'S',ctx:'Jordi pregunta por los avisos previos a la entrada en Ceuta.',dijo:'«Tuvimos más de 140 muertos»',corto:'Más de 140 fallecidos',e:[['si','B','la ONG Caminando Fronteras'],['no','B','la Delegación del Gobierno en Ceuta']],tit:'141 según la ONG; 78 según la Delegación del Gobierno',p:['Caminando Fronteras: al menos 141 fallecidos.','Delegación del Gobierno en Ceuta: 78 víctimas encontradas en aguas españolas, en la misma fecha.','No hemos encontrado un balance oficial final.'],f:[['El número de fallecidos durante la entrada masiva a Ceuta se eleva a 141','https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/','Prensa · Infobae · 5-8-2026','B']]},
-{t:2478,q:'S',ctx:'Jordi plantea si el Gobierno muestra subordinación a Marruecos.',dijo:'«A mí me hackearon el móvil, lo denuncié ante la Audiencia…»',corto:'Me hackearon el móvil y lo denuncié',e:[['nc']],tit:'Falta la nota oficial',p:['Aún no hemos localizado la nota oficial de la denuncia. La añadiremos cuando la encontremos.'],f:[]},
-{t:2883,q:'W',ctx:'Lo afirma Jordi Wild al preguntar por el Consejo de Seguridad Nacional.',dijo:'«Tardaste 25 días aproximadamente en convocar el Consejo de Seguridad Nacional»',corto:'25 días hasta convocar el Consejo de Seguridad Nacional',e:[['si','B']],tit:'26 días: del 30 de julio al 25 de agosto',p:['La entrada fue el 30 de julio y el Consejo de Seguridad Nacional extraordinario se reunió el martes 25 de agosto de 2026.'],f:[['Sánchez convoca un Consejo de Seguridad Nacional extraordinario por la crisis de Ceuta','https://www.que.es/2026/08/25/consejo-seguridad-nacional-ceuta/','Prensa · Qué! · 25-8-2026','B']]},
-{t:3092,q:'W',ctx:'Lo afirma Jordi Wild al abrir el bloque de inmigración.',dijo:'«La inmigración es una de las mayores causas de preocupación según el CIS […] Vivienda es la número uno, pero inmigración está muy cerca»',corto:'En el CIS, la vivienda es la primera y la inmigración va cerca',e:[['si','A']],tit:'Vivienda 55,7 %; inmigración 20,9 %',p:['CIS de octubre de 2026, suma de las tres menciones: la vivienda es el primer problema (55,7 %) y la inmigración el segundo (20,9 %).','«Muy cerca» es una valoración: aquí van las dos cifras.'],f:[['Barómetro de octubre 2026, estudio 3582, pregunta 13R','https://www.cis.es/documents/d/guest/es3582sd_a-pdf','Oficial · CIS','A']]},
-{t:3268,q:'S',ctx:'Jordi pregunta por las causas de la preocupación por la inmigración.',dijo:'«Del 100 % de migrantes que nos llegan, el 40 % son europeos. El otro 40 % son latinoamericanos»',corto:'El 40 % son europeos y el 40 % latinoamericanos',e:[['nc']],tit:'Sin un reparto oficial por continentes',p:['No hemos encontrado una publicación oficial con ese reparto, ni a qué periodo se refiere.'],f:[]},
-{t:3372,q:'S',ctx:'Jordi plantea dificultades de integración en los barrios.',dijo:'«El 25 % del crecimiento económico […] trae causa del aporte de la migración»',corto:'La migración aporta el 25 % del crecimiento',e:[['nc']],tit:'No localizamos el informe',p:['No hemos localizado el informe oficial con esa cifra ni el periodo al que se refiere.'],f:[]},
-{t:3703,q:'S',ctx:'Jordi pregunta por el futuro demográfico.',dijo:'«Pasar de cinco semanas los permisos de paternidad y maternidad, equipararlos […] a 19 semanas»',corto:'Permisos equiparados y ampliados a 19 semanas',e:[['si','A']],tit:'19 semanas, en el BOE',p:['El Real Decreto-ley 9/2025 amplía el permiso de nacimiento y cuidado a 19 semanas para cada progenitor.'],f:[['Real Decreto-ley 9/2025, permiso de nacimiento y cuidado','https://www.boe.es/buscar/act.php?id=BOE-A-2025-15741','Oficial · BOE','A']]},
-{t:3856,q:'S',ctx:'Jordi plantea preocupaciones sobre seguridad.',dijo:'«Durante los años de Mariano Rajoy se recortaron las fuerzas y cuerpos de seguridad del Estado en 15.000 efectivos y hoy hay 180.000»',corto:'Con Rajoy, 15.000 efectivos menos; hoy hay 180.000',e:[['nc']],tit:'Último dato oficial: 156.400 (2023)',p:['El último dato oficial que hemos encontrado es de junio de 2023: 156.400 agentes de Policía Nacional y Guardia Civil.','No hemos encontrado uno de 2026 ni el de los años de Rajoy.'],f:[['España alcanza el máximo histórico de agentes: 156.400 efectivos','https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2023/290623-espana-maximo-historico-agentes-policia.aspx','Oficial · La Moncloa · 29-6-2023','A']]},
-{t:3926,q:'S',ctx:'Jordi compara la política migratoria con la de otros países.',dijo:'«Más o menos es 1.200.000 personas»',corto:'La regularización abarca 1,2 millones de personas',e:[['si','B']],tit:'1.174.978 solicitudes',p:['El plazo cerró con 1.174.978 solicitudes. Son solicitudes presentadas, no personas ya regularizadas.'],f:[['Qué se sabe de las 1.174.978 solicitudes presentadas','https://www.iberoeconomia.es/inmigracion/regularizacion-de-inmigrantes-en-espana-que-se-sabe-de-las-1-174-978-solicitudes-presentadas/','Prensa · Iberoeconomía (balance del Gobierno)','B']]},
-{t:3935,q:'S',ctx:'Jordi compara la política migratoria con la de otros países.',dijo:'«Medio millón de ellas ya está trabajando y cotizando a la Seguridad Social»',corto:'Medio millón ya trabaja y cotiza',e:[['si','A']],tit:'490.586 afiliados en alta',p:['A finales de octubre de 2026 había 490.586 afiliados en alta relacionados con la regularización extraordinaria.'],f:[['La Seguridad Social supera los 22,6 millones de afiliados en octubre','https://www.inclusion.gob.es/w/la-seguridad-social-supera-los-22-6-millones-de-afiliados-en-octubre-tras-sumar-784.573-afiliados-en-el-ultimo-ano','Oficial · Ministerio de Inclusión','A']]},
-{t:3977,q:'S',ctx:'Jordi compara la política migratoria con la de otros países.',dijo:'«Poner 500 millones de euros encima de la mesa para que los ayuntamientos y las comunidades autónomas…»',corto:'500 millones para la integración',e:[['si','A']],tit:'Más de 500 millones el primer año',p:['El Plan de Integración y Ciudadanía arranca con más de 500 millones de euros el primer año.','La nota no detalla cuánto va a ayuntamientos y comunidades.'],f:[['Sánchez anuncia que el nuevo Plan de Integración y Ciudadanía arranca…','https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/300626-sanchez-plan-integracion-ciudadania.aspx','Oficial · La Moncloa · 30-6-2026','A']]},
-{t:4063,q:'W',ctx:'Lo afirma Jordi Wild al abrir el bloque de corrupción.',dijo:'«En el caso de Ábalos ya condenado, 24 años de cárcel»',corto:'Ábalos, condenado a 24 años',e:[['si','B']],tit:'Supremo, 22 de junio de 2026',p:['El Tribunal Supremo condenó a José Luis Ábalos a 24 años de cárcel.'],f:[['El Supremo condena a Ábalos a 24 años de cárcel','https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/','Prensa · RTVC · 22-6-2026','B']]},
-{t:4953,q:'S',ctx:'Jordi pregunta si confía en Zapatero.',dijo:'«En las compañías aéreas llegamos a salvar, me parece que son casi 8.500 puestos de trabajo»',corto:'Casi 8.500 empleos salvados en las aerolíneas',e:[['nc']],tit:'Sin balance oficial',p:['No hemos encontrado un balance oficial del fondo de rescate con esa cifra.'],f:[]},
-{t:5188,q:'S',ctx:'Jordi pregunta por los resultados del Gobierno en vivienda.',dijo:'«El 13 % de la vivienda que se ha construido […] han sido viviendas protegidas, más de 150.000»',corto:'El 13 % fue vivienda protegida: más de 150.000',e:[['nc']],tit:'Ninguna estadística oficial lo da',p:['No hemos encontrado una estadística oficial que dé ese porcentaje acumulado para estos años.'],f:[]},
-{t:5395,q:'W',ctx:'Lo afirma Jordi Wild al preguntar por las viviendas entregadas.',dijo:'«El 18 de diciembre del 23 te comprometiste a habilitar 184.000 viviendas públicas y de alquiler asequible en esta legislatura»',corto:'Compromiso de 184.000 viviendas (18-12-2023)',e:[['si','A']],tit:'Así lo anunció La Moncloa',p:['El 18-12-2023 el presidente anunció que se usarían «todos los recursos del Estado para habilitar 184.000 viviendas públicas y de alquiler asequible» durante la legislatura.','Cuántas están entregadas: no hemos encontrado un balance oficial.'],f:[['«Si España tiene hoy un gran reto constitucional, ese es el de la vivienda»','https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2023/181223-sanchez-casa-arquitectura.aspx','Oficial · La Moncloa · 18-12-2023','A']]},
-{t:5790,q:'W',ctx:'Lo afirma Jordi Wild al repasar la hemeroteca.',dijo:'«Ley mordaza, que en 2015 ya prometiste que la ibas a derogar, estamos en 2026, sigue activa»',corto:'La ley mordaza sigue en vigor',e:[['si','A']],tit:'Ley Orgánica 4/2015, vigente',p:['La Ley Orgánica 4/2015, de protección de la seguridad ciudadana, sigue vigente en el BOE.'],f:[['Ley Orgánica 4/2015, de protección de la seguridad ciudadana (consolidada)','https://www.boe.es/buscar/act.php?id=BOE-A-2015-3442','Oficial · BOE','A']]},
-{t:6102,q:'S',ctx:'Jordi pregunta por los pactos y los cambios de posición.',dijo:'«En lugar de tener 121 escaños como tengo del año 2023…»',corto:'Tengo 121 escaños de 2023',e:[['si','A']],tit:'121 escaños el 23 de julio de 2023',p:['El PSOE obtuvo 121 escaños en las elecciones generales de 2023.'],f:[['Resultados electorales, generales 2023','https://infoelectoral.interior.gob.es','Oficial · Ministerio del Interior','A']]},
-{t:6435,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Dije que iba a subir el salario mínimo interprofesional y lo he subido»',corto:'Dije que subiría el salario mínimo y lo he subido',e:[['si','A']],tit:'735,90 € en 2018; 1.221 € en 2026',p:['Salario mínimo en 2026: 1.221 euros al mes (Real Decreto 126/2026). En 2018 era de 735,90 euros (Real Decreto 1077/2017).'],f:[['Real Decreto 126/2026, salario mínimo interprofesional','https://www.boe.es/eli/es/rd/2026/02/18/126/con','Oficial · BOE','A']]},
-{t:6440,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Dije que iba a regularizar las pensiones conforme al IPC y lo he hecho»',corto:'He revalorizado las pensiones con el IPC',e:[['si','A']],tit:'Ley 21/2021',p:['La Ley 21/2021 fija que las pensiones se revalorizan cada año según el IPC medio.'],f:[['Ley 21/2021, de garantía del poder adquisitivo de las pensiones','https://www.boe.es/buscar/act.php?id=BOE-A-2021-21652','Oficial · BOE','A']]},
-{t:6445,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Dije que iba a apostar por la educación pública […] por la sanidad pública y lo he hecho»',corto:'He apostado por la educación y la sanidad públicas',e:[['op']],tit:'Es una valoración',p:['«Apostar por» no es una cifra ni un hecho concreto que se pueda medir.'],f:[]},
-{t:6453,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Le dije al señor Trump que no al 5 % del presupuesto en defensa y lo he mantenido»',corto:'Dije no al 5 % en defensa y lo he mantenido',e:[['si','B']],tit:'Comunicado a la OTAN',p:['El Gobierno comunicó a la OTAN que España no llegará al 5 % del PIB en defensa.'],f:[['España no llegará al 5 % en gasto en defensa','https://rtvc.es/sanchez-comunica-a-la-otan-que-no-subira-el-gasto-en-defensa-hasta-el-5/','Prensa · RTVC','B']]}
+{t:1098,q:'S',ctx:'Jordi pregunta por la seguridad de las vías tras los accidentes.',dijo:'«…de 2026 a 2030 […] vamos a invertir 19.000 millones de euros en el mantenimiento y la seguridad de las vías»',corto:'19.000 millones de 2026 a 2030 para las vías',e:[['op']],tit:'Es una inversión prometida',p:['Es un compromiso de gasto futuro: no se contrasta.'],pr:[]},
+{t:1857,q:'S',ctx:'Jordi pregunta qué sabía el Gobierno antes de la entrada en Ceuta.',dijo:'«Los más de 80.000 que el 30 y el 31 de julio entraron en Ceuta»',corto:'Más de 80.000 entraron el 30 y 31 de julio',e:[['no','B','el Ministerio del Interior (72.000)'],['si','B','el Gobierno de Ceuta (96.058)']],tit:'Las estimaciones van de 72.000 a 96.058',p:['El ministro del Interior habló de 72.000 personas y mantuvo esa cifra en agosto. El ministro Ángel Víctor Torres llegó a decir 80.000 y su ministerio lo rebajó a 72.000 minutos después.','Un informe del Gobierno de Ceuta eleva la estimación a 96.058.','No hay un recuento oficial publicado: todas son estimaciones, y por eso el resultado depende de la fuente.'],
+ pr:[{d:'not',f:'Infobae',fe:'5-8-2026',n:'B',u:'https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/',tit:'El número de fallecidos durante la entrada masiva a Ceuta se eleva a 141, según la ONG Caminando Fronteras',x:['Este martes, el ministro del Interior, Fernando Grande-Marlaska, ','cifró en 72.000 las personas que entraron en Ceuta el 30 de julio',' y aseguró en rueda de prensa que, de ellas, 70.000 ya han regresado a Marruecos…']},
+  {d:'not',f:'Maldita.es (verificador)',fe:'23-9-2026',n:'B',u:'https://maldita.es/control-del-poder/20260923/cronologia-cifras-migrantes-ceuta/',tit:'El baile de cifras sobre los migrantes en Ceuta desde el 30 de julio de 2026',x:['10 de agosto: ','Torres dio otro número superior, 80.000 migrantes.',' Una cifra que “fuentes” del ministerio que dirige Ángel Víctor Torres, no identificadas, a la Agencia EFE rebajaron, minutos después, a 72.000.']},
+  {d:'not',f:'Artículo 14',fe:'18-10-2026',n:'B',u:'https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html',tit:'Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio',x:['Un informe interno elaborado por el Ejecutivo de la ciudad autónoma ','calcula que al menos 96.058 personas accedieron al territorio español durante aquellas jornadas',', una cifra que supera ampliamente las estimaciones difundidas hasta ahora por el Ministerio del Interior.']}]},
+{t:2114,q:'S',ctx:'Jordi pregunta por los avisos previos a la entrada en Ceuta.',dijo:'«Tuvimos más de 140 muertos»',corto:'Más de 140 fallecidos',e:[['si','B','la ONG Caminando Fronteras']],tit:'141 según Caminando Fronteras',p:['La ONG Caminando Fronteras cuenta 141 fallecidos: 63 recuperados en Marruecos y 78 en Ceuta.','Los 78 de Ceuta son los mismos que contaba la Delegación del Gobierno en aguas españolas.','No hemos encontrado un balance oficial del total.'],
+ pr:[{d:'not',f:'Agencia EFE',n:'B',u:'https://efe.com/otras-noticias-espana/ceuta-migrantes-victimas-muertos/',tit:'Una ONG cifra en 141 los muertos en la crisis de Ceuta',x:['La oenegé Caminando Fronteras ','cifra en 141 los fallecidos durante la crisis migratoria vivida en Ceuta',' desde el pasado jueves, 30 de julio, hasta ayer, y apunta que 63 cadáveres se recuperaron en territorio marroquí y los 78 restantes en la ciudad autónoma.']}]},
+{t:2478,q:'S',ctx:'Jordi plantea si el Gobierno muestra subordinación a Marruecos.',dijo:'«A mí me hackearon el móvil, lo denuncié ante la Audiencia…»',corto:'Me hackearon el móvil y lo denuncié',e:[['si','A']],tit:'Lo comunicó el Gobierno en mayo de 2022',p:['En la rueda de prensa del Consejo de Ministros del 10-5-2022, el Gobierno explicó que el móvil del presidente fue uno de los tres infectados y que había presentado una denuncia el 2 de mayo.','La transcripción no dice ante qué juzgado.'],
+ pr:[{d:'doc',f:'La Moncloa · Rueda de prensa del Consejo de Ministros, 10-5-2022',n:'A',u:'https://www.lamoncloa.gob.es/consejodeministros/ruedas/Paginas/2022/rpcm10052022.aspx',x:['','Tres teléfonos han resultado infectados, dos de ellos ya les dimos cuenta el pasado 2 de mayo, el del presidente del Gobierno',' y el de la ministra de Defensa…']},
+  {d:'doc',f:'La Moncloa · Rueda de prensa del Consejo de Ministros, 10-5-2022',n:'A',u:'https://www.lamoncloa.gob.es/consejodeministros/ruedas/Paginas/2022/rpcm10052022.aspx',x:['En las próximas horas, pondremos esta información a disposición de la justicia, con los informes del Centro Criptológico Nacional, para ','ampliar la denuncia que ya presentáramos el pasado lunes 2 de mayo','.']}]},
+{t:2883,q:'W',ctx:'Lo afirma Jordi Wild al preguntar por el Consejo de Seguridad Nacional.',dijo:'«Tardaste 25 días aproximadamente en convocar el Consejo de Seguridad Nacional»',corto:'25 días hasta convocar el Consejo de Seguridad Nacional',e:[['si','B']],tit:'26 días: del 30 de julio al 25 de agosto',p:['La entrada fue el 30 de julio y el Consejo de Seguridad Nacional extraordinario se reunió el martes 25 de agosto de 2026.'],
+ pr:[{d:'not',f:'Qué!',fe:'25-8-2026',n:'B',u:'https://www.que.es/2026/08/25/consejo-seguridad-nacional-ceuta/',tit:'Sánchez convoca este martes un Consejo de Seguridad Nacional extraordinario por la crisis de Ceuta',x:['Cerca de 70.000 personas entraron en Ceuta el 30 de julio y ','este martes el Gobierno reúne al Consejo de Seguridad Nacional','.']}]},
+{t:3092,q:'W',ctx:'Lo afirma Jordi Wild al abrir el bloque de inmigración.',dijo:'«La inmigración es una de las mayores causas de preocupación según el CIS […] Vivienda es la número uno, pero inmigración está muy cerca»',corto:'En el CIS, la vivienda es la primera y la inmigración va cerca',e:[['si','A']],tit:'Vivienda 55,7 %; inmigración 20,9 %',p:['En el barómetro del CIS de octubre de 2026 (suma de las tres menciones), la vivienda es el primer problema y la inmigración el segundo.','«Muy cerca» es una valoración: aquí van las dos cifras.'],
+ pr:[{d:'graf',f:'CIS · Barómetro de octubre 2026, estudio 3582, pregunta 13R',n:'A',u:'https://www.cis.es/documents/d/guest/es3582sd_a-pdf',filas:[['La vivienda',55.7,'55,7 %',1],['La inmigración',20.9,'20,9 %',1]],nota:'Principales problemas de España, suma de las tres respuestas posibles (% de entrevistados).'}]},
+{t:3268,q:'S',ctx:'Jordi pregunta por las causas de la preocupación por la inmigración.',dijo:'«Del 100 % de migrantes que nos llegan, el 40 % son europeos. El otro 40 % son latinoamericanos»',corto:'El 40 % son europeos y el 40 % latinoamericanos',e:[['no','A']],tit:'INE 2024: 23,1 % europeos y 48,9 % latinoamericanos',p:['En 2024 llegaron a España 1.144.227 personas de nacionalidad extranjera, según la Estadística de Migraciones del INE.','El 23,1 % tenían nacionalidad europea y el 48,9 % latinoamericana: ninguna de las dos cifras es el 40 %.','No dijo a qué año se refería: usamos el último año completo publicado.'],
+ pr:[{d:'graf',f:'INE · Estadística de Migraciones, llegadas de 2024 por nacionalidad (tabla 69688). Cálculo propio',n:'A',u:'https://www.ine.es/jaxiT3/Tabla.htm?t=69688',filas:[['Latinoamérica',48.9,'48,9 %',1],['Europa',23.1,'23,1 %',1],['África',18.7,'18,7 %'],['Asia',7.6,'7,6 %'],['Resto',1.7,'1,7 %']],nota:'1.144.227 llegadas de personas extranjeras en 2024 (sin contar a españoles). Latinoamérica = Centroamérica, Caribe, Sudamérica y México.'}]},
+{t:3372,q:'S',ctx:'Jordi plantea dificultades de integración en los barrios.',dijo:'«El 25 % del crecimiento económico […] trae causa del aporte de la migración»',corto:'La migración aporta el 25 % del crecimiento',e:[['no','B']],tit:'El Banco de España calcula el 52 % (2022-2024)',p:['Según el Banco de España, citado por Europa Press, la población inmigrante aportó 2 de los 3,9 puntos de crecimiento medio anual entre 2022 y 2024: el 52 %.','Sánchez no dijo a qué periodo se refería. La cifra del Banco de España es mayor que la suya.'],
+ pr:[{d:'not',f:'Europa Press',fe:'17-11-2025',n:'B',u:'https://www.europapress.es/economia/laboral-00346/noticia-inmigrantes-aportaron-mitad-crecimiento-medio-pib-2022-2024-banco-espana-20251117183258.html',tit:'Los inmigrantes aportaron la mitad del crecimiento medio del PIB entre 2022 y 2024, según Banco de España',x:['La población inmigrante contribuyó con dos puntos porcentuales al crecimiento medio anual del 3,9% del Producto Interior Bruto (PIB) entre 2022 y 2024, lo que supone que ','el 52% del crecimiento económico en dicho periodo se debió a este colectivo',', según el Banco de España.']}]},
+{t:3703,q:'S',ctx:'Jordi pregunta por el futuro demográfico.',dijo:'«Pasar de cinco semanas los permisos de paternidad y maternidad, equipararlos […] a 19 semanas»',corto:'Permisos equiparados y ampliados a 19 semanas',e:[['si','A']],tit:'19 semanas para cada progenitor, en el BOE',p:['El Real Decreto-ley 9/2025 amplía el permiso de nacimiento y cuidado a 19 semanas, iguales para la madre y para el otro progenitor.'],
+ pr:[{d:'doc',f:'BOE · Real Decreto-ley 9/2025, de 29 de julio',n:'A',u:'https://www.boe.es/buscar/act.php?id=BOE-A-2025-15741',x:['«4. El nacimiento, que comprende el parto y el cuidado de menor, ','suspenderá el contrato de trabajo de la madre biológica y el del progenitor distinto de la madre biológica durante diecinueve semanas','.']}]},
+{t:3856,q:'S',ctx:'Jordi plantea preocupaciones sobre seguridad.',dijo:'«Durante los años de Mariano Rajoy se recortaron las fuerzas y cuerpos de seguridad del Estado en 15.000 efectivos»',corto:'Con Rajoy se recortaron 15.000 efectivos',e:[['si','A','el Gobierno (más de 13.000)']],tit:'Más de 13.000 según el Gobierno; 14.470 según Público',p:['En una respuesta en el Congreso (19-5-2026), el Gobierno dice que entre 2012 y 2018 se perdieron más de 13.000 efectivos de Policía Nacional y Guardia Civil.','Público cifra el recorte en 14.470. Es una cifra próxima a la que dio Sánchez.'],
+ pr:[{d:'doc',f:'Congreso · Respuesta del Gobierno a las preguntas 184/39110 y 184/39111 (19-5-2026)',n:'A',u:'https://www.congreso.es/l15p/e12/e_0120012_n_000.pdf',x:['…es preciso recordar, en primer término, que ','entre 2012 y 2018 se perdieron en España más de 13.000 efectivos de las Fuerzas y Cuerpos de Seguridad del Estado',' (FCSE)…']},
+  {d:'not',f:'Público',n:'B',u:'https://www.publico.es/politica/marlaska-frena-ere-rajoy-policia-guardia-civil-5-803-nuevos-agentes-perder-14-470.html',tit:'Marlaska frena el ‘ERE’ de Rajoy en la Policía y la Guardia Civil: 5.803 nuevos agentes tras perder 14.470',x:['…en seis años y medio aplicaron en sus plantillas ','un tajo de 14.470 efectivos','…']}]},
+{t:3858,q:'S',ctx:'Jordi plantea preocupaciones sobre seguridad.',dijo:'«…y hoy hay 180.000»',corto:'Hoy hay 180.000 efectivos',e:[['no','A','la respuesta del Gobierno en el Congreso (159.075)'],['si','B','el Ministerio del Interior en la prensa (183.150)']],tit:'159.075 agentes (Congreso) o 183.150 efectivos (Interior)',p:['En su respuesta en el Congreso, el Gobierno cifra en 159.075 los agentes de Policía Nacional y Guardia Civil en diciembre de 2025.','Interior, citado por Servimedia, habla de 183.150 efectivos en conjunto.','Ninguna de las dos fuentes explica la diferencia: puede que cuenten cosas distintas.'],
+ pr:[{d:'doc',f:'Congreso · Respuesta del Gobierno a las preguntas 184/39110 y 184/39111 (19-5-2026)',n:'A',u:'https://www.congreso.es/l15p/e12/e_0120012_n_000.pdf',x:['Gracias a ello, Policía Nacional y Guardia Civil alcanzaron en conjunto los ','159.075 agentes en diciembre de 2025, máximo histórico','.']},
+  {d:'not',f:'Servimedia',n:'B',u:'https://www.servimedia.es/noticias/gobierno-convoca-6094-plazas-para-policia-nacional-guardia-civil-mayor-oferta-15-anos/1412792707',tit:'El Gobierno convoca 6.094 plazas para Policía Nacional y Guardia Civil, la mayor oferta en 15 años',x:['…ha permitido aumentar la plantilla de ambos cuerpos en torno a un 20% de media ','hasta alcanzar, en conjunto, los 183.150 efectivos','.']}]},
+{t:3926,q:'S',ctx:'Jordi compara la política migratoria con la de otros países.',dijo:'«Más o menos es 1.200.000 personas»',corto:'La regularización abarca 1,2 millones de personas',e:[['si','A']],tit:'1.174.978 solicitudes',p:['El plazo de la regularización extraordinaria cerró con 1.174.978 solicitudes.','Son solicitudes presentadas, no personas ya regularizadas.'],
+ pr:[{d:'doc',f:'Ministerio de Inclusión · Nota de prensa',n:'A',u:'https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas',x:['El plazo de presentación de solicitud para la Regularización Extraordinaria ','concluye con 1.174.978 solicitudes recibidas','']}]},
+{t:3935,q:'S',ctx:'Jordi compara la política migratoria con la de otros países.',dijo:'«Medio millón de ellas ya está trabajando y cotizando a la Seguridad Social»',corto:'Medio millón ya trabaja y cotiza',e:[['si','A']],tit:'490.586 afiliados en alta',p:['A finales de octubre de 2026 había 490.586 afiliados en alta relacionados con la regularización extraordinaria.'],
+ pr:[{d:'doc',f:'Ministerio de Inclusión · Afiliación de octubre de 2026',n:'A',u:'https://www.inclusion.gob.es/w/la-seguridad-social-supera-los-22-6-millones-de-afiliados-en-octubre-tras-sumar-784.573-afiliados-en-el-ultimo-ano',x:['Si se realiza una fotografía del mercado laboral, a finales de octubre, ','el número de afiliados extranjeros en alta relacionados con el proceso extraordinario de regularización es de 490.586','.']}]},
+{t:3977,q:'S',ctx:'Jordi compara la política migratoria con la de otros países.',dijo:'«Poner 500 millones de euros encima de la mesa para que los ayuntamientos y las comunidades autónomas…»',corto:'500 millones para la integración',e:[['si','A']],tit:'Más de 500 millones el primer año',p:['El Plan de Integración y Ciudadanía arranca con más de 500 millones de euros el primer año. Lo dijo el propio Sánchez al presentarlo el 30-6-2026.','La nota no detalla cuánto va a ayuntamientos y a comunidades.'],
+ pr:[{d:'vid',f:'La Moncloa (canal oficial) · 30-6-2026',n:'A',v:'HjBG1DRMm1c',a:784,b:798,x:'«Va a tener una dotación inicial de más de 500 millones de euros el primer año»'},
+  {d:'doc',f:'La Moncloa · Nota del 30-6-2026',n:'A',u:'https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/300626-sanchez-plan-integracion-ciudadania.aspx',x:['El Plan, donde han trabajado una decena de ministerios y recoge aportaciones de sociedad civil y diálogo social, ','se pone en marcha con más de 500 millones de euros el primer año',' y cuenta con cuatro grandes ejes, 16 medidas y 10 objetivos para 2030.']}]},
+{t:4063,q:'W',ctx:'Lo afirma Jordi Wild al abrir el bloque de corrupción.',dijo:'«En el caso de Ábalos ya condenado, 24 años de cárcel»',corto:'Ábalos, condenado a 24 años',e:[['si','B']],tit:'24 años y 3 meses (Supremo, 22-6-2026)',p:['El Tribunal Supremo condenó a José Luis Ábalos a 24 años y tres meses de cárcel.'],
+ pr:[{d:'not',f:'RTVC',fe:'22-6-2026',n:'B',u:'https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/',tit:'El Supremo condena a Ábalos a 24 años de cárcel',x:['El Tribunal Supremo ','ha condenado a 24 años y tres meses de cárcel al exministro de Transportes',' y exdirigente socialista José Luis Ábalos…']}]},
+{t:4953,q:'S',ctx:'Jordi pregunta si confía en Zapatero.',dijo:'«En las compañías aéreas llegamos a salvar, me parece que son casi 8.500 puestos de trabajo»',corto:'Casi 8.500 empleos salvados en las aerolíneas',e:[['nc']],tit:'Sin balance oficial',p:['No hemos encontrado un balance oficial del empleo salvado en las aerolíneas rescatadas.'],pr:[]},
+{t:5188,q:'S',ctx:'Jordi pregunta por los resultados del Gobierno en vivienda.',dijo:'«El 13 % de la vivienda que se ha construido […] han sido viviendas protegidas…»',corto:'El 13 % fue vivienda protegida',e:[['si','B']],tit:'12 %: 90.005 de 749.987',p:['Según datos del Ministerio de Vivienda publicados por Servimedia, desde 2018 hasta junio de 2026 se terminaron 749.987 viviendas, de las que 90.005 eran protegidas: el 12 %.','Es una cifra próxima al 13 % que dijo.'],
+ pr:[{d:'not',f:'Servimedia (datos del Ministerio de Vivienda)',n:'B',u:'https://www.servimedia.es/noticias/88-750000-viviendas-terminadas-espana-desde-2018-fueron-para-mercado-libre/1413477346',tit:'Un 88% de las 750.000 viviendas terminadas en España desde 2018 fueron para el mercado libre',x:['Un 88% de las 749.987 viviendas terminadas en España desde el 2018 […] son viviendas que se han comercializado en el mercado libre, mientras que ','solo 90.005 han sido viviendas calificadas como protegidas','.']}]},
+{t:5190,q:'S',ctx:'Jordi pregunta por los resultados del Gobierno en vivienda.',dijo:'«…más de 150.000»',corto:'Más de 150.000 viviendas protegidas',e:[['no','B']],tit:'90.005 viviendas protegidas terminadas',p:['Con los mismos datos del Ministerio de Vivienda, las viviendas protegidas terminadas desde 2018 son 90.005, no más de 150.000.'],
+ pr:[{d:'not',f:'Servimedia (datos del Ministerio de Vivienda)',n:'B',u:'https://www.servimedia.es/noticias/88-750000-viviendas-terminadas-espana-desde-2018-fueron-para-mercado-libre/1413477346',tit:'Un 88% de las 750.000 viviendas terminadas en España desde 2018 fueron para el mercado libre',x:['…mientras que ','solo 90.005 han sido viviendas calificadas como protegidas','.']}]},
+{t:5395,q:'W',ctx:'Lo afirma Jordi Wild al preguntar por las viviendas entregadas.',dijo:'«El 18 de diciembre del 23 te comprometiste a habilitar 184.000 viviendas públicas y de alquiler asequible en esta legislatura»',corto:'Compromiso de 184.000 viviendas (18-12-2023)',e:[['si','A']],tit:'Así lo dijo Sánchez el 18-12-2023',p:['El 18-12-2023, en la Casa de la Arquitectura, Sánchez anunció que se usarían «todos los recursos del Estado para habilitar 184.000 viviendas públicas y de alquiler asequible».','Cuántas están entregadas: no hemos encontrado un balance oficial.'],
+ pr:[{d:'vid',f:'La Moncloa (canal oficial) · 18-12-2023',n:'A',v:'zeCV69NUk68',a:1663,b:1678,x:'«…usar todos los recursos del Estado para habilitar 184.000 viviendas públicas y de alquiler asequible»'},
+  {d:'doc',f:'La Moncloa · Nota del 18-12-2023',n:'A',u:'https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2023/181223-sanchez-casa-arquitectura.aspx',x:['El presidente ha asegurado que el Gobierno va a usar, durante la legislatura, ','"todos los recursos del Estado para habilitar 184.000 viviendas públicas y de alquiler asequible"','.']}]},
+{t:5790,q:'W',ctx:'Lo afirma Jordi Wild al repasar la hemeroteca.',dijo:'«Ley mordaza, que en 2015 ya prometiste que la ibas a derogar, estamos en 2026, sigue activa»',corto:'La ley mordaza sigue en vigor',e:[['si','A']],tit:'Ley Orgánica 4/2015, vigente',p:['La Ley Orgánica 4/2015, de protección de la seguridad ciudadana, sigue vigente en el BOE (texto consolidado).'],
+ pr:[{d:'doc',f:'BOE · Texto consolidado',n:'A',u:'https://www.boe.es/buscar/act.php?id=BOE-A-2015-3442',x:['','Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana.',' Estado: vigente.']}]},
+{t:6102,q:'S',ctx:'Jordi pregunta por los pactos y los cambios de posición.',dijo:'«En lugar de tener 121 escaños como tengo del año 2023…»',corto:'Tengo 121 escaños de 2023',e:[['si','A']],tit:'121 escaños el 23 de julio de 2023',p:['El PSOE obtuvo 121 de los 350 escaños en las elecciones generales de 2023.'],
+ pr:[{d:'cifra',f:'Ministerio del Interior · Resultados definitivos, generales 23-J 2023',n:'A',u:'https://infoelectoral.interior.gob.es',num:'121',txt:'escaños del PSOE en 2023, de 350'}]},
+{t:6435,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Dije que iba a subir el salario mínimo interprofesional y lo he subido»',corto:'Dije que subiría el salario mínimo y lo he subido',e:[['si','A']],tit:'735,90 € en 2018; 1.221 € en 2026',p:['El salario mínimo pasó de 735,90 euros al mes en 2018 (Real Decreto 1077/2017) a 1.221 euros en 2026 (Real Decreto 126/2026).'],
+ pr:[{d:'doc',f:'BOE · Real Decreto 1077/2017 (salario mínimo de 2018)',n:'A',u:'https://www.boe.es/eli/es/rd/2017/12/29/1077',fr:'queda fijado en 24,53',x:['…sin distinción de sexo ni edad de los trabajadores, queda fijado en 24,53 euros/día o ','735,9 euros/mes',', según que el salario esté fijado por días o por meses.']},
+  {d:'doc',f:'BOE · Real Decreto 126/2026 (salario mínimo de 2026)',n:'A',u:'https://www.boe.es/eli/es/rd/2026/02/18/126/con',fr:'queda fijado en 40,70',x:['…sin distinción de sexo ni edad de las personas trabajadoras, queda fijado en 40,70 euros/día o ','1 221 euros/mes',', según el salario esté fijado por días o por meses.']}]},
+{t:6440,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Dije que iba a regularizar las pensiones conforme al IPC y lo he hecho»',corto:'He revalorizado las pensiones con el IPC',e:[['si','A']],tit:'Ley 21/2021',p:['La Ley 21/2021 fija que las pensiones se revalorizan cada año según el IPC medio.'],
+ pr:[{d:'doc',f:'BOE · Ley 21/2021, de 28 de diciembre',n:'A',u:'https://www.boe.es/buscar/act.php?id=BOE-A-2021-21652',x:['2. A estos efectos, las pensiones de Seguridad Social, en su modalidad contributiva, incluido el importe de la pensión mínima, ','se revalorizarán al comienzo de cada año en el porcentaje equivalente al valor medio de las tasas de variación interanual',' […] del Índice de Precios al Consumo de los doce meses previos a diciembre del año anterior.']}]},
+{t:6445,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Dije que iba a apostar por la educación pública […] por la sanidad pública y lo he hecho»',corto:'He apostado por la educación y la sanidad públicas',e:[['op']],tit:'Es una valoración',p:['«Apostar por» no es una cifra ni un hecho concreto que se pueda medir.'],pr:[]},
+{t:6453,q:'S',ctx:'Jordi pregunta qué diría a quien desconfía de sus promesas.',dijo:'«Le dije al señor Trump que no al 5 % del presupuesto en defensa y lo he mantenido»',corto:'Dije no al 5 % en defensa y lo he mantenido',e:[['si','A']],tit:'Lo anunció el 22-6-2025',p:['En una declaración institucional, Sánchez anunció un acuerdo con la OTAN para no subir el gasto en defensa hasta el 5 % del PIB.','El Gobierno lo comunicó por carta a la OTAN, según RTVC.'],
+ pr:[{d:'vid',f:'La Moncloa (canal oficial) · 22-6-2025',n:'A',v:'kwz75EoitEo',a:29,b:44,x:'«…sin tener que incrementar nuestro gasto de defensa hasta el 5 % del producto interior bruto»'},
+  {d:'doc',f:'La Moncloa · Declaración institucional, 22-6-2025',n:'A',u:'https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/20250622-sanchez-declaracion-institucional-otan.aspx',x:['Un acuerdo, a nuestro juicio, muy positivo, que nos va a permitir cumplir con nuestros compromisos con la Alianza Atlántica y preservar algo muy importante, que es su unidad, ','sin tener que incrementar nuestro gasto de defensa hasta el 5% del Producto Interior Bruto','.']},
+  {d:'not',f:'RTVC',n:'B',u:'https://rtvc.es/sanchez-comunica-a-la-otan-que-no-subira-el-gasto-en-defensa-hasta-el-5/',tit:'Sánchez comunica a la OTAN que no subirá el gasto en defensa hasta el 5 %'}]}
 ];
 const QN={S:'Pedro Sánchez',W:'Jordi Wild'};
+const TIPO={doc:['📄','Documento'],not:['📰','Noticia'],vid:['▶','Vídeo'],graf:['📊','Datos'],cifra:['📊','Dato oficial']};
 const hms=s=>{s=Math.max(0,Math.floor(s));const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=String(s%60).padStart(2,'0');return h?`${h}:${String(m).padStart(2,'0')}:${x}`:`${m}:${x}`};
 const k=x=>x.e.length>1?'mx':x.e[0][0];
 const $=id=>document.getElementById(id);
+const nota=n=>`<span class="nota${n==='B'?' b':''}" title="${n==='A'?'Fuente oficial':'Noticia: no hay fuente oficial'}">${n}</span>`;
+// enlace que abre la fuente y resalta el fragmento (Chrome, Edge y Safari; en PDF no)
+const frag=(u,s)=>!s||/pdf|\.csv|infoelectoral/i.test(u)?u:u+'#:~:text='+encodeURIComponent(s.replace(/^[…\s"«]+|[…\s"»]+$/g,'').slice(0,90)).replace(/-/g,'%2D');
 let dur=6710;
 
 // cabecera del panel
@@ -156,42 +260,79 @@ const FIL=[['todo','Todo',D.length],...['si','no','mx','nc','op'].filter(c=>cuen
 $('filtros').innerHTML=FIL.map(([c,t,n])=>`<button data-f="${c}" aria-pressed="${c==='todo'}">${c.length===2?`<span class="punto ${c}"></span>`:''}${t} ${n}</button>`).join('');
 let filtro='todo';
 $('filtros').onclick=ev=>{const b=ev.target.closest('button');if(!b)return;filtro=b.dataset.f;
- $('filtros').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));pintarLista()};
+ $('filtros').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));cerrar();pintarLista()};
 function pintarLista(){
  $('lista').innerHTML=D.map((x,i)=>(filtro==='todo'||k(x)===filtro||x.q===filtro)?`<button class="mom" id="m${i}" data-i="${i}">
   <div class="l1"><span>${hms(x.t)}</span><span class="ver ${k(x)}"><span class="punto ${k(x)}"></span>${ET[k(x)]}</span>${x.q==='W'?'<span class="quien">WILD</span>':''}</div>
   <div class="ctx">${x.ctx}</div><div class="dijo">${x.corto}</div></button>`:'').join('');
  marcarActual(true);
 }
-$('lista').onclick=ev=>{const b=ev.target.closest('.mom');if(b)abrir(+b.dataset.i,true)};
+$('lista').onclick=ev=>{const b=ev.target.closest('.mom');if(b){tocado=Date.now();abrir(+b.dataset.i,true)}};
 
-// ficha de un momento
-function abrir(i,saltar){
- const x=D[i];
+// ficha del panel
+let sel=-1;
+function abrir(i,saltar,auto){
+ const x=D[i];sel=i;
  $('ficha').innerHTML=`<button class="volver" id="volver">← Todos los momentos</button>
  <h2 class="ver ${k(x)}"><span class="punto ${k(x)}" style="width:12px;height:12px"></span>${ET[k(x)]}</h2>
- ${x.e.length>1?x.e.map(([c,n,a])=>`<div style="font-size:14px"><span class="ver ${c}">${ET[c]}</span> ${a} <span class="nota${n==='B'?' b':''}">${n}</span></div>`).join(''):''}
+ ${x.e.length>1?x.e.map(([c,n,a])=>`<div style="font-size:13.5px;margin:2px 0"><span class="ver ${c}">${ET[c]}</span> ${a} ${nota(n)}</div>`).join(''):''}
  <div class="ctx">${x.ctx}</div>
  <div class="bloque"><div class="etq">Lo que dijo · ${QN[x.q]}</div><div class="cita">${x.dijo}</div>
   <button class="salto" data-t="${x.t}">▶ Verlo en el vídeo · ${hms(x.t)}</button></div>
- <div class="bloque"><div class="etq">Lo que dicen los datos</div><div class="titular">${x.tit}</div>${x.p.map(l=>`<p>${l}</p>`).join('')}
-  <p style="font-size:13px;color:var(--suave)">Comprobación: ${COMPROBADO}.</p></div>
- ${x.f.length?`<div class="bloque"><div class="etq">Compruébalo tú</div>${x.f.map(([t,u,tipo,n])=>`<a class="fuente" href="${u}" target="_blank" rel="noopener">${t} ↗<small><span class="nota${n==='B'?' b':''}">${n}</span>${tipo}</small></a>`).join('')}</div>`:''}`;
- $('lista').style.display='none';$('ficha').style.display='block';$('ficha').scrollTop=0;
- $('volver').onclick=cerrar;
- history.replaceState(null,'','?m='+i);
- if(saltar&&listo){yt.seekTo(x.t,true);yt.playVideo()}
- if(innerWidth<=1000)$('panel').scrollIntoView({behavior:'smooth'});
+ <div class="bloque"><div class="etq">Lo que dicen los datos</div><div class="titular">${x.tit}</div>
+  ${x.pr.length?'<button class="abajo" data-ver="1">Ver la prueba, abajo del vídeo ↓</button>':''}
+  <p style="font-size:12.5px;color:var(--suave)">Comprobación: ${COMPROBADO}.</p></div>
+ ${x.pr.length?`<div class="bloque"><div class="etq">Compruébalo tú</div>${[...new Map(x.pr.filter(p=>p.u||p.v).map(p=>[p.u||p.v,p])).values()].map(p=>`<a class="fuente" href="${p.v?`https://www.youtube.com/watch?v=${p.v}&t=${p.a}s`:p.u}" target="_blank" rel="noopener">${p.tit||p.f} ↗<small>${nota(p.n)}${p.tit?p.f:(p.d==='vid'?'Vídeo':'Fuente oficial')}${p.fe?' · '+p.fe:''}</small></a>`).join('')}</div>`:''}`;
+ $('lista').style.display='none';const f=$('ficha');f.style.display='block';f.scrollTop=0;
+ f.classList.remove('nueva');void f.offsetWidth;f.classList.add('nueva');
+ $('volver').onclick=()=>{tocado=Date.now();cerrar()};
+ explicar(i);
+ if(!auto)history.replaceState(null,'','?m='+i);
+ if(saltar&&listo){yt.seekTo(x.t,true);yt.playVideo();actual=i;marcarActual(false)}
+ if(saltar&&innerWidth<=1000)window.scrollTo({top:0,behavior:'smooth'});
 }
-function cerrar(){$('ficha').style.display='none';$('lista').style.display='block';history.replaceState(null,'',location.pathname);marcarActual(true)}
-$('ficha').addEventListener('click',ev=>{const b=ev.target.closest('.salto');if(!b)return;ir(+b.dataset.t)});
+function cerrar(){sel=-1;$('ficha').style.display='none';$('lista').style.display='block';history.replaceState(null,'',location.pathname);marcarActual(true)}
+$('ficha').addEventListener('click',ev=>{
+ const b=ev.target.closest('.salto');if(b){ir(+b.dataset.t);return}
+ if(ev.target.closest('[data-ver]'))$('expl').scrollIntoView({behavior:'smooth',block:'start'})});
+$('ficha').addEventListener('wheel',()=>tocado=Date.now(),{passive:true});
+$('ficha').addEventListener('touchmove',()=>tocado=Date.now(),{passive:true});
+
+// recuadro de abajo: por qué, con la prueba
+let explicado=null;
+function prueba(p){
+ const cab=`<div class="pcab"><span>${TIPO[p.d][0]}</span><span class="tipo">${TIPO[p.d][1]}</span><span style="flex:1">${p.f}${p.fe?' · '+p.fe:''}</span>${nota(p.n)}</div>`;
+ const ext=p.x&&typeof p.x!=='string'?`<div class="papel">${p.x[0]||''}<mark>${p.x[1]}</mark>${p.x[2]||''}</div>`:'';
+ let cuerpo='',ir='';
+ if(p.d==='doc'){cuerpo=ext;ir=`<a class="ir" href="${frag(p.u,p.fr||p.x[1])}" target="_blank" rel="noopener">Abrir el documento ↗</a>`}
+ if(p.d==='not'){cuerpo=`<div class="ntit">${p.tit}</div>${ext}`;ir=`<a class="ir" href="${frag(p.u,p.x&&p.x[1])}" target="_blank" rel="noopener">Leer la noticia ↗</a>`}
+ if(p.d==='vid'){cuerpo=`<div class="vmini"><button data-v="${p.v}" data-a="${p.a}" data-b="${p.b}" style="background-image:url(https://i.ytimg.com/vi/${p.v}/hqdefault.jpg)" aria-label="Reproducir el fragmento"><span>▶</span></button></div><div class="vcita">${p.x}</div>`;
+  ir=`<a class="ir" href="https://www.youtube.com/watch?v=${p.v}&t=${p.a}s" target="_blank" rel="noopener">Ver en YouTube ↗</a>`}
+ if(p.d==='graf'){const mx=Math.max(...p.filas.map(f=>f[1]));cuerpo=`<div class="graf">${p.filas.map(([l,v,t,on])=>`<div class="fila${on?' on':''}"><span>${l}</span><span class="bar"><i style="width:${v/mx*100}%"></i></span><span>${t}</span></div>`).join('')}<div class="gnota">${p.nota}</div></div>`;
+  ir=`<a class="ir" href="${p.u}" target="_blank" rel="noopener">Ver la tabla original ↗</a>`}
+ if(p.d==='cifra'){cuerpo=`<div class="cifra">${p.num}</div><div>${p.txt}</div>`;ir=`<a class="ir" href="${p.u}" target="_blank" rel="noopener">Ir a la fuente ↗</a>`}
+ return `<div class="prueba">${cab}<div class="pcuerpo">${cuerpo}</div><div class="pie-p"><span style="color:var(--suave)">${p.d==='vid'?`Fragmento ${hms(p.a)}–${hms(p.b)}`:'Fuente directa'}</span>${ir}</div></div>`;
+}
+function explicar(i){
+ if(i===explicado)return;explicado=i;
+ if(i<0){$('expl').innerHTML=`<div class="ecab"><span class="vivo"><i></i>Ahora en el vídeo</span></div><h2>Aquí verás por qué cada dato coincide o no</h2>
+  <p class="vacio">Dale al play o toca una marca de la línea. Cuando en la entrevista se diga una cifra o un hecho, aparecerá aquí la explicación con su prueba: el fragmento del documento resaltado, la noticia, el vídeo o los datos, y el enlace directo a la fuente.</p>`;return}
+ const x=D[i],c=k(x);
+ $('expl').innerHTML=`<div class="ecab"><span class="vivo"><i></i>Momento ${hms(x.t)}</span><span class="pill ver ${c}"><span class="punto ${c}" style="margin:0"></span>${ET[c]}</span>${x.e.length>1?x.e.map(([cc,n,a])=>`<span class="ver ${cc}" style="font-weight:600">${ET[cc]} ${a}</span>`).join(' · '):''}</div>
+ <h2>${x.tit}</h2><p class="dijo">${QN[x.q]}: ${x.dijo}</p>
+ ${x.p.map(l=>`<p>${l}</p>`).join('')}
+ ${x.pr.length?`<div class="pruebas">${x.pr.map(prueba).join('')}</div>`:`<p class="vacio" style="margin-top:12px">${c==='op'?'Las opiniones y promesas no se contrastan: no hay prueba que enseñar.':'No hemos encontrado una fuente publicada con la que contrastarlo. Si la tienes, escríbenos.'}</p>`}`;
+}
+$('expl').addEventListener('click',ev=>{const b=ev.target.closest('.vmini button');if(!b)return;
+ if(listo&&yt.pauseVideo)yt.pauseVideo();
+ b.outerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.v}?start=${b.dataset.a}&end=${b.dataset.b}&autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Fragmento de vídeo"></iframe>`});
 
 // línea de tiempo con números por tramos
 function pintarLinea(){
  const bins={};D.forEach((x,i)=>{const b=Math.floor(x.t/240);(bins[b]=bins[b]||[]).push(i)});
  $('ticks').innerHTML=D.map((x,i)=>`<button class="tick ${k(x)}" data-i="${i}" style="left:${x.t/dur*100}%" aria-label="${hms(x.t)} ${x.corto}"></button>`).join('')+
   Object.entries(bins).map(([b,v])=>`<span class="num" style="left:${(v.reduce((s,i)=>s+D[i].t,0)/v.length)/dur*100}%">${v.length}</span>`).join('');
- $('caps').innerHTML=CAP.map(([t,n],i)=>`<button data-t="${t}" data-c="${i}"><span>${hms(t)}</span><span>${n}</span></button>`).join('');
+ $('caps').innerHTML='<h3>Capítulos</h3>'+CAP.map(([t,n],i)=>`<button data-t="${t}" data-c="${i}"><span>${hms(t)}</span><span>${n}</span></button>`).join('');
 }
 pintarLinea();
 $('ticks').addEventListener('mouseover',ev=>{const b=ev.target.closest('.tick');if(!b)return;const x=D[b.dataset.i];
@@ -208,35 +349,32 @@ const s=document.createElement('script');s.src='https://www.youtube.com/iframe_a
 window.onYouTubeIframeAPIReady=()=>{yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com',videoId:VID,playerVars:{rel:0,playsinline:1},
  events:{onReady:()=>{listo=true;const d=yt.getDuration();if(d>0){dur=d;pintarLinea();}const m=new URLSearchParams(location.search).get('m');if(m!==null&&D[m])yt.cueVideoById(VID,D[m].t)}}})};
 function ir(t){if(!listo){open(`https://www.youtube.com/watch?v=${VID}&t=${Math.floor(t)}s`,'_blank');return}
- yt.seekTo(t,true);yt.playVideo();avisados.clear();D.forEach((x,i)=>{if(x.t<t-2)avisados.add(i)});tiempo(t);
+ yt.seekTo(t,true);yt.playVideo();tiempo(t,true);
  if(innerWidth<=1000)window.scrollTo({top:0,behavior:'smooth'})}
 
-// seguimiento: momento actual, lista y aviso
-let actual=-1,tocado=0;const avisados=new Set();
+// seguimiento: al llegar a un dato se abre solo en el panel y abajo sale su explicación
+let actual=-1,tocado=0;
 $('lista').addEventListener('wheel',()=>tocado=Date.now(),{passive:true});
 $('lista').addEventListener('touchmove',()=>tocado=Date.now(),{passive:true});
 function marcarActual(forzar){
  document.querySelectorAll('.mom').forEach(m=>m.classList.toggle('act',+m.dataset.i===actual));
  document.querySelectorAll('.tick').forEach(m=>m.classList.toggle('act',+m.dataset.i===actual));
  const el=$('m'+actual);
- if(el&&innerWidth>1000&&(forzar||Date.now()-tocado>8000))$('lista').scrollTo({top:el.offsetTop-$('lista').offsetTop-8,behavior:'smooth'});
+ if(el&&$('lista').style.display!=='none'&&(forzar||Date.now()-tocado>8000))$('lista').scrollTo({top:el.offsetTop-$('lista').offsetTop-8,behavior:'smooth'});
 }
-let tAviso;
-function avisar(i){const x=D[i];
- $('aviso').innerHTML=`<b>${ET[k(x)]}</b> · ${hms(x.t)}<br>${x.corto} — ${x.tit}<br><span style="opacity:.7;font-size:12.5px">Toca para ver la fuente</span>`;
- $('aviso').dataset.i=i;$('aviso').classList.add('ver-aviso');clearTimeout(tAviso);tAviso=setTimeout(()=>$('aviso').classList.remove('ver-aviso'),7000)}
-$('aviso').onclick=()=>{abrir(+$('aviso').dataset.i,false);$('aviso').classList.remove('ver-aviso')};
-function tiempo(t){
+function tiempo(t,salto){
  const p=Math.min(t/dur*100,100);$('hecho').style.width=p+'%';$('cab').style.left=p+'%';
  $('reloj').textContent=`${hms(t)} / ${hms(dur)}`;
  let c=0;CAP.forEach(([ct],j)=>{if(ct<=t)c=j});$('capact').textContent=CAP[c][1];
  document.querySelectorAll('.caps button').forEach(b=>b.classList.toggle('act',+b.dataset.c===c));
  let i=-1;D.forEach((x,j)=>{if(x.t<=t+1)i=j});
- if(i!==actual){actual=i;marcarActual(false)}
- D.forEach((x,j)=>{if(x.t<=t+1&&x.t>t-6&&!avisados.has(j)){avisados.add(j);avisar(j)}});
+ if(i===actual)return;
+ actual=i;marcarActual(false);explicar(i);
+ // como si se tocara el momento: salvo que la persona esté leyendo el panel (12 s) o haya quitado «Seguir el vídeo»
+ if(i>=0&&$('seguir').checked&&(salto||Date.now()-tocado>12000)&&sel!==i)abrir(i,false,true);
 }
 setInterval(()=>{if(listo&&yt.getPlayerState&&yt.getPlayerState()===1)tiempo(yt.getCurrentTime())},400);
-pintarLista();tiempo(0);
+pintarLista();explicar(-1);tiempo(0);
 const m0=new URLSearchParams(location.search).get('m');if(m0!==null&&D[m0])abrir(+m0,false);
 </script>
 </body></html>
