@@ -1,170 +1,205 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pedro Sánchez en The Wild Project: datos contrastados · programa claro</title>
-<meta name="description" content="Las cifras y hechos que se dijeron en la entrevista de The Wild Project a Pedro Sánchez (13-11-2026), contrastados con fuentes oficiales. Sin opinar.">
+<meta name="description" content="Las cifras y hechos que se dijeron en la entrevista de The Wild Project a Pedro Sánchez (13-11-2026), contrastados con fuentes oficiales mientras ves el vídeo. Sin opinar.">
 <link rel="stylesheet" href="_base.css"><link rel="icon" href="icono_1024.png">
 <style>
-.video{position:relative;padding-top:56.25%;margin:16px 0 6px;border-radius:12px;overflow:hidden;background:#000}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.leyenda{display:grid;gap:6px;padding:14px 16px;border-radius:12px;background:rgba(184,241,53,.18);font-size:15px}
-.c{border:1px solid rgba(127,127,127,.3);border-radius:12px;padding:14px 16px;margin:14px 0}
-.c .q{font-size:16px;margin:6px 0 10px}.c .q b{font-weight:700}.c .m{font-size:13px;opacity:.8}
-.e{display:inline-block;font-size:13px;font-weight:700;padding:2px 9px;border-radius:99px;margin:0 4px 4px 0;border:1px solid currentColor}
-.si{color:#2f6b00}.no{color:#a33a00}.nc{color:#555}.op{color:#5a3f9a}
-.n{display:inline-block;font-size:12px;font-weight:800;padding:1px 7px;border-radius:6px;background:#0b0b0b;color:#fff;margin-left:4px}.n.b{background:#777}
-.c ul{margin:6px 0 0;padding-left:20px;font-size:15px}.fu{font-size:14px;margin-top:8px}
-@media (prefers-color-scheme:dark){.si{color:#B8F135}.no{color:#ffab70}.nc{color:#bbb}.op{color:#c9b3ff}.n{background:#eee;color:#111}.n.b{background:#999}}
+:root{--si:#2f6b00;--no:#b34700;--nc:#6b6b6b;--op:#5a3f9a;--mx:#9a7a00;--borde:rgba(127,127,127,.28);--panel:#fff}
+@media (prefers-color-scheme:dark){:root{--si:#B8F135;--no:#ffab70;--nc:#b5b5b5;--op:#c9b3ff;--mx:#f2d45c;--panel:#1b1e18}}
+header div{max-width:1280px}main.ancho{max-width:1280px;padding-top:18px}footer{max-width:1280px}
+.intro{max-width:860px;margin:0 0 14px}h1{margin:6px 0 8px}
+.rejilla{display:grid;gap:22px;grid-template-columns:1fr}
+@media (min-width:980px){.rejilla{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:start}
+ .izq{position:sticky;top:12px}.der{max-height:calc(100vh - 24px);overflow:auto;position:sticky;top:12px;padding-right:6px}}
+@media (max-width:979px){.izq{position:sticky;top:0;z-index:5;background:#f6f7f2;padding:8px 0 6px;margin:0 -16px;padding-left:16px;padding-right:16px}
+ .ahora .det,.ahora .fu{display:none}.ahora .q{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}}
+@media (max-width:979px) and (prefers-color-scheme:dark){.izq{background:#121410}}
+.video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}.video>div,.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* línea de tiempo */
+.linea{position:relative;height:46px;margin:10px 0 2px;user-select:none}
+.capitulos{position:absolute;left:0;right:0;top:20px;height:8px;border-radius:4px;overflow:hidden;background:var(--borde)}
+.capitulos span{position:absolute;top:0;bottom:0;border-right:2px solid #f6f7f2;cursor:pointer}
+.capitulos span:nth-child(odd){background:rgba(127,127,127,.18)}
+.progreso{position:absolute;left:0;top:20px;height:8px;border-radius:4px;background:#B8F135;pointer-events:none;width:0}
+.cabezal{position:absolute;top:13px;width:3px;height:22px;background:#0b0b0b;border-radius:2px;pointer-events:none;left:0;transform:translateX(-1px)}
+@media (prefers-color-scheme:dark){.cabezal{background:#fff}.capitulos span{border-right-color:#121410}}
+.marca{position:absolute;top:2px;width:14px;height:14px;margin-left:-7px;border-radius:50%;border:2px solid var(--panel);cursor:pointer;padding:0;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.marca:hover,.marca.activa{transform:scale(1.35);z-index:2}
+.marca.si{background:var(--si)}.marca.no{background:var(--no)}.marca.nc{background:var(--nc)}.marca.op{background:var(--op)}.marca.mx{background:var(--mx)}
+.burbuja{position:absolute;top:-30px;transform:translateX(-50%);background:#0b0b0b;color:#fff;font-size:12px;padding:3px 8px;border-radius:6px;white-space:nowrap;pointer-events:none;display:none;z-index:3}
+.cap-nombre{font-size:13px;opacity:.75;display:flex;justify-content:space-between;gap:8px}
+/* tarjetas */
+.e{display:inline-block;font-size:12.5px;font-weight:700;padding:1px 9px;border-radius:99px;margin:0 4px 4px 0;border:1px solid currentColor;white-space:nowrap}
+.e.si{color:var(--si)}.e.no{color:var(--no)}.e.nc{color:var(--nc)}.e.op{color:var(--op)}
+.n{display:inline-block;font-size:11.5px;font-weight:800;padding:0 6px;border-radius:5px;background:#0b0b0b;color:#fff;margin-left:2px;vertical-align:1px}.n.b{background:#888}
+@media (prefers-color-scheme:dark){.n{background:#eee;color:#111}.n.b{background:#999;color:#111}}
+.c{border:1px solid var(--borde);border-radius:12px;padding:12px 14px;margin:0 0 10px;background:var(--panel);transition:box-shadow .2s,border-color .2s}
+.c.activa{border-color:#8fc21a;box-shadow:0 0 0 3px rgba(184,241,53,.55)}
+.c.pasada{opacity:.72}.c.oculta{display:none}
+.m{font-size:13px;opacity:.85;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.t{font:700 13px/1 ui-monospace,monospace;background:rgba(184,241,53,.35);color:inherit;border:0;border-radius:6px;padding:5px 8px;cursor:pointer;text-decoration:none}
+.t:hover{background:#B8F135;color:#0b0b0b}
+.q{font-size:15.5px;margin:6px 0 8px;line-height:1.5}
+.det{margin:4px 0 0;padding-left:18px;font-size:14.5px}.fu{font-size:13.5px;margin-top:6px}
+.ahora{margin-top:8px;border-width:2px;border-color:#8fc21a}
+.ahora .titulo{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.7;display:flex;justify-content:space-between}
+.sig{font-size:13px;opacity:.75;margin-top:6px}
+.filtros{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;position:sticky;top:0;background:#f6f7f2;padding:4px 0 8px;z-index:1}
+@media (prefers-color-scheme:dark){.filtros{background:#121410}}
+.filtros button{font:inherit;font-size:13px;border:1px solid var(--borde);background:transparent;color:inherit;border-radius:99px;padding:4px 11px;cursor:pointer}
+.filtros button[aria-pressed=true]{background:#B8F135;color:#0b0b0b;border-color:#8fc21a;font-weight:700}
+details{border:1px solid var(--borde);border-radius:12px;padding:10px 16px;margin:14px 0;background:var(--panel)}summary{cursor:pointer;font-weight:700}
+.leyenda{display:grid;gap:6px;font-size:14.5px;margin-top:10px}
+.pie{font-size:14px;opacity:.8}
 </style></head>
-<body><header><div><a href="index.html">🔍 programa claro</a></div></header><main>
+<body><header><div><a href="index.html">🔍 programa claro</a></div></header><main class="ancho">
+<div class="intro">
 <h1>Pedro Sánchez en The Wild Project: los datos, contrastados</h1>
-<p>Entrevista de Jordi Wild a Pedro Sánchez, candidato del PSOE a la presidencia, publicada el 13 de noviembre de 2026 en el canal <a href="https://www.youtube.com/@TheWildProject">The Wild Project</a>. Aquí van las cifras y los hechos concretos que se dijeron, <b>de los dos</b>, contrastados con la fuente más oficial que hemos encontrado. No valoramos opiniones ni promesas.</p>
+<p>Entrevista de Jordi Wild a Pedro Sánchez, candidato del PSOE a la presidencia, publicada el 13-11-2026 en <a href="https://www.youtube.com/@TheWildProject">The Wild Project</a>. Dale al play: según avanza la entrevista, arriba aparece el dato que se acaba de decir, contrastado con su fuente. Cifras y hechos <b>de los dos</b>; no valoramos opiniones ni promesas.</p>
+</div>
 
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mStOFBvToUI" title="The Wild Project #393 - Pedro Sánchez" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-<p class="m" style="font-size:13px;opacity:.75">Vídeo incrustado del canal original. Cada minuto de abajo enlaza a ese momento de la entrevista.</p>
+<div class="rejilla">
+ <section class="izq" aria-label="Vídeo y línea de tiempo">
+  <div class="video"><div id="yt"></div></div>
+  <div class="linea" id="linea" aria-label="Línea de tiempo de la entrevista">
+   <div class="capitulos" id="capitulos"></div><div class="progreso" id="progreso"></div><div class="cabezal" id="cabezal"></div>
+   <div id="marcas"></div><div class="burbuja" id="burbuja"></div>
+  </div>
+  <div class="cap-nombre"><span id="capitulo">Inicio</span><span id="reloj">0:00 / 1:51:50</span></div>
+  <article class="c ahora" id="ahora" aria-live="polite"></article>
+ </section>
 
-<h2>Cómo leer esta página</h2>
+ <section class="der" id="der" aria-label="Todas las afirmaciones">
+  <div class="filtros" id="filtros"></div>
+  <div id="lista"></div>
+ </section>
+</div>
+
+<h2>Resumen</h2>
+<p id="resumen"></p>
+<details><summary>Cómo leer esta página (etiquetas y fuentes)</summary>
 <div class="leyenda">
 <div><span class="e si">Coincide con</span> lo que dice la fuente.</div>
 <div><span class="e no">No coincide con</span> lo que dice la fuente.</div>
 <div><span class="e nc">No se puede comprobar</span> no hemos encontrado un dato publicado con el que contrastarlo.</div>
 <div><span class="e op">Opinión/promesa: no se contrasta</span></div>
-<div><span class="n">A</span> fuente oficial (BOE, CIS, Interior, Moncloa, ministerios…) · <span class="n b">B</span> noticia de un medio: se usa solo si no hemos encontrado fuente oficial.</div>
-</div>
-<p style="font-size:14px;opacity:.8">Las citas salen de los subtítulos automáticos del vídeo y pueden tener pequeñas erratas. Mismo criterio para entrevistado y entrevistador. Orden: el de la entrevista.</p>
-
-<h2>Lo que se dijo</h2>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=1098s">18:18</a> · Pedro Sánchez · trenes</div>
-<div class="q">«…de 2026 a 2030 […] vamos a invertir <b>19.000 millones de euros</b> en el mantenimiento y la seguridad de las vías ferroviarias»</div>
-<span class="e op">Opinión/promesa: no se contrasta</span>
-<ul><li>Es un compromiso de inversión futura.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=1857s">30:57</a> · Pedro Sánchez · Ceuta</div>
-<div class="q">«Los <b>más de 80.000</b> que el 30 y el 31 de julio entraron en Ceuta»</div>
-<span class="e no">No coincide con</span><span class="n b">B</span>
-<ul><li>El ministro del Interior cifró en <b>72.000</b> las personas que entraron en Ceuta el 30 de julio, según la noticia de Infobae (5-8-2026). No hemos encontrado la cifra en una publicación oficial.</li></ul>
-<div class="fu">Fuente: <a href="https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/">Infobae, 5-8-2026</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=2114s">35:14</a> · Pedro Sánchez · Ceuta</div>
-<div class="q">«Tuvimos <b>más de 140 muertos</b>»</div>
-<span class="e si">Coincide con</span> la ONG Caminando Fronteras <span class="n b">B</span><br><span class="e no">No coincide con</span> la Delegación del Gobierno en Ceuta <span class="n b">B</span>
-<ul><li>Caminando Fronteras: al menos <b>141</b> fallecidos.</li><li>Delegación del Gobierno en Ceuta: <b>78</b> víctimas encontradas en aguas españolas, en la misma fecha.</li><li>Las dos cifras salen de la misma noticia; no hemos encontrado un balance oficial final.</li></ul>
-<div class="fu">Fuente: <a href="https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/">Infobae, 5-8-2026</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=2478s">41:18</a> · Pedro Sánchez · Pegasus</div>
-<div class="q">«A mí me <b>hackearon el móvil</b>, lo denuncié ante la Audiencia…»</div>
-<span class="e nc">No se puede comprobar</span>
-<ul><li>Aún no hemos localizado la nota oficial de la denuncia. La añadiremos cuando la encontremos.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=2883s">48:03</a> · Jordi Wild · Ceuta</div>
-<div class="q">«Tardaste <b>25 días</b> aproximadamente en convocar el Consejo de Seguridad Nacional»</div>
-<span class="e si">Coincide con</span><span class="n b">B</span>
-<ul><li>La entrada fue el 30 de julio y el Consejo de Seguridad Nacional extraordinario se reunió el martes 25 de agosto de 2026: 26 días después.</li></ul>
-<div class="fu">Fuente: <a href="https://www.que.es/2026/08/25/consejo-seguridad-nacional-ceuta/">Qué!, 25-8-2026</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3092s">51:32</a> · Jordi Wild · CIS</div>
-<div class="q">«La inmigración es una de las mayores causas de preocupación según el CIS […] <b>Vivienda es la número uno</b>, pero inmigración está muy cerca»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>CIS de octubre de 2026 (estudio 3582), suma de las tres menciones: <b>la vivienda, 55,7 %</b> (primer problema); <b>la inmigración, 20,9 %</b> (segundo).</li><li>«Muy cerca» es una valoración: aquí van las dos cifras.</li></ul>
-<div class="fu">Fuente: <a href="https://www.cis.es/documents/d/guest/es3582sd_a-pdf">CIS, estudio 3582, pregunta 13R</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3268s">54:28</a> · Pedro Sánchez · inmigración</div>
-<div class="q">«Del 100 % de migrantes que nos llegan, <b>el 40 % son europeos</b>. El otro <b>40 % son latinoamericanos</b>»</div>
-<span class="e nc">No se puede comprobar</span>
-<ul><li>No hemos encontrado una publicación oficial con ese reparto por continentes.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3372s">56:12</a> · Pedro Sánchez · economía</div>
-<div class="q">«El <b>25 % del crecimiento económico</b> […] trae causa del aporte de la migración»</div>
-<span class="e nc">No se puede comprobar</span>
-<ul><li>No hemos localizado el informe oficial con esa cifra ni el periodo al que se refiere.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3703s">1:01:43</a> · Pedro Sánchez · permisos</div>
-<div class="q">«Pasar de cinco semanas los permisos de paternidad y maternidad, equipararlos […] <b>a 19 semanas</b>»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>El Real Decreto-ley 9/2025 amplía el permiso de nacimiento y cuidado a <b>19 semanas</b> para cada progenitor.</li></ul>
-<div class="fu">Fuente: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2025-15741">BOE, Real Decreto-ley 9/2025</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3856s">1:04:16</a> · Pedro Sánchez · policía</div>
-<div class="q">«Durante los años de Mariano Rajoy se recortaron las fuerzas y cuerpos de seguridad del Estado <b>en 15.000 efectivos</b> y <b>hoy hay 180.000</b>»</div>
-<span class="e nc">No se puede comprobar</span>
-<ul><li>El último dato oficial que hemos encontrado es de junio de 2023: <b>156.400</b> agentes de Policía Nacional y Guardia Civil. No hemos encontrado uno de 2026.</li></ul>
-<div class="fu">Fuente: <a href="https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2023/290623-espana-maximo-historico-agentes-policia.aspx">La Moncloa, 29-6-2023</a> <span class="n">A</span></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3926s">1:05:26</a> · Pedro Sánchez · regularización</div>
-<div class="q">«Más o menos es <b>1.200.000 personas</b>»</div>
-<span class="e si">Coincide con</span><span class="n b">B</span>
-<ul><li>El plazo cerró con <b>1.174.978 solicitudes</b>. Son solicitudes presentadas, no personas ya regularizadas.</li></ul>
-<div class="fu">Fuente: <a href="https://www.iberoeconomia.es/inmigracion/regularizacion-de-inmigrantes-en-espana-que-se-sabe-de-las-1-174-978-solicitudes-presentadas/">Iberoeconomía</a> (balance difundido por el Gobierno)</div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3926s">1:05:26</a> · Pedro Sánchez · regularización</div>
-<div class="q">«<b>Medio millón</b> de ellas ya está trabajando y cotizando a la Seguridad Social»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>A finales de octubre de 2026 había <b>490.586</b> afiliados en alta relacionados con la regularización extraordinaria.</li></ul>
-<div class="fu">Fuente: <a href="https://www.inclusion.gob.es/w/la-seguridad-social-supera-los-22-6-millones-de-afiliados-en-octubre-tras-sumar-784.573-afiliados-en-el-ultimo-ano">Ministerio de Inclusión, afiliación de octubre</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=3977s">1:06:17</a> · Pedro Sánchez · integración</div>
-<div class="q">«Poner <b>500 millones de euros</b> encima de la mesa para que los ayuntamientos y las comunidades autónomas…»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>El Plan de Integración y Ciudadanía arranca con <b>más de 500 millones de euros</b> el primer año.</li><li>La nota no detalla cuánto va a ayuntamientos y comunidades.</li></ul>
-<div class="fu">Fuente: <a href="https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/300626-sanchez-plan-integracion-ciudadania.aspx">La Moncloa, 30-6-2026</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=4063s">1:07:43</a> · Jordi Wild · corrupción</div>
-<div class="q">«En el caso de Ábalos ya <b>condenado, 24 años de cárcel</b>»</div>
-<span class="e si">Coincide con</span><span class="n b">B</span>
-<ul><li>El Tribunal Supremo condenó a José Luis Ábalos a 24 años de cárcel (22-6-2026).</li></ul>
-<div class="fu">Fuente: <a href="https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/">RTVC, 22-6-2026</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=4953s">1:22:33</a> · Pedro Sánchez · rescates</div>
-<div class="q">«En las compañías aéreas llegamos a salvar, me parece que son <b>casi 8.500 puestos de trabajo</b>»</div>
-<span class="e nc">No se puede comprobar</span>
-<ul><li>No hemos encontrado un balance oficial del fondo de rescate con esa cifra.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5188s">1:26:28</a> · Pedro Sánchez · vivienda</div>
-<div class="q">«El <b>13 %</b> de la vivienda que se ha construido […] han sido viviendas protegidas, <b>más de 150.000</b>»</div>
-<span class="e nc">No se puede comprobar</span>
-<ul><li>No hemos encontrado una estadística oficial que dé ese porcentaje acumulado para estos años.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5395s">1:29:55</a> · Jordi Wild · vivienda</div>
-<div class="q">«El 18 de diciembre del 23 te comprometiste a habilitar <b>184.000 viviendas</b> públicas y de alquiler asequible en esta legislatura»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>El 18-12-2023 el presidente anunció que se usarían «todos los recursos del Estado para habilitar 184.000 viviendas públicas y de alquiler asequible» durante la legislatura.</li><li>Cuántas están entregadas: Sánchez dijo en la entrevista que no tenía el dato; nosotros tampoco hemos encontrado un balance oficial.</li></ul>
-<div class="fu">Fuente: <a href="https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2023/181223-sanchez-casa-arquitectura.aspx">La Moncloa, 18-12-2023</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5790s">1:36:30</a> · Jordi Wild · ley de seguridad ciudadana</div>
-<div class="q">«Ley mordaza, que en 2015 ya prometiste que la ibas a derogar, estamos en 2026, <b>sigue activa</b>»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>La Ley Orgánica 4/2015, de protección de la seguridad ciudadana, sigue vigente en el BOE.</li></ul>
-<div class="fu">Fuente: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-3442">BOE, Ley Orgánica 4/2015 (texto consolidado)</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=6102s">1:41:42</a> · Pedro Sánchez · Congreso</div>
-<div class="q">«En lugar de tener <b>121 escaños</b> como tengo del año 2023…»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>El PSOE obtuvo 121 escaños en las elecciones generales del 23 de julio de 2023.</li></ul>
-<div class="fu">Fuente: <a href="https://infoelectoral.interior.gob.es">Ministerio del Interior, resultados electorales</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=6435s">1:47:15</a> · Pedro Sánchez · balance</div>
-<div class="q">«Dije que iba a <b>subir el salario mínimo</b> interprofesional y lo he subido»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>Salario mínimo en 2026: <b>1.221 euros al mes</b> (Real Decreto 126/2026). En 2018 era de 735,90 euros (Real Decreto 1077/2017).</li></ul>
-<div class="fu">Fuente: <a href="https://www.boe.es/eli/es/rd/2026/02/18/126/con">BOE, Real Decreto 126/2026</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=6435s">1:47:15</a> · Pedro Sánchez · balance</div>
-<div class="q">«Dije que iba a regularizar <b>las pensiones conforme al IPC</b> y lo he hecho»</div>
-<span class="e si">Coincide con</span><span class="n">A</span>
-<ul><li>La Ley 21/2021 fija que las pensiones se revalorizan cada año según el IPC medio.</li></ul>
-<div class="fu">Fuente: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2021-21652">BOE, Ley 21/2021</a></div></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=6435s">1:47:15</a> · Pedro Sánchez · balance</div>
-<div class="q">«Dije que iba a apostar por la educación pública […] por la sanidad pública y lo he hecho»</div>
-<span class="e op">Opinión/promesa: no se contrasta</span>
-<ul><li>«Apostar por» no es una cifra ni un hecho concreto que se pueda medir.</li></ul></div>
-
-<div class="c"><div class="m"><a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=6453s">1:47:33</a> · Pedro Sánchez · defensa</div>
-<div class="q">«Le dije al señor Trump que <b>no al 5 %</b> del presupuesto en defensa y lo he mantenido»</div>
-<span class="e si">Coincide con</span><span class="n b">B</span>
-<ul><li>El Gobierno comunicó a la OTAN que España no llegará al 5 % del PIB en defensa.</li></ul>
-<div class="fu">Fuente: <a href="https://rtvc.es/sanchez-comunica-a-la-otan-que-no-subira-el-gasto-en-defensa-hasta-el-5/">RTVC</a></div></div>
-
-<h2>Resumen</h2>
-<p>23 afirmaciones (18 de Pedro Sánchez y 5 de Jordi Wild): <b>13</b> coinciden con la fuente, <b>1</b> no coincide, <b>1</b> coincide con una fuente y no con otra, <b>6</b> no se pueden comprobar y <b>2</b> son opinión o promesa. De las 15 contrastadas, 9 con fuente oficial (A) y 6 con noticias (B).</p>
+<div><span class="n">A</span> fuente oficial (BOE, CIS, Interior, Moncloa, ministerios…) · <span class="n b">B</span> noticia de un medio: solo si no hemos encontrado fuente oficial.</div>
+<div>Las citas salen de los subtítulos automáticos del vídeo y pueden tener pequeñas erratas. Mismo criterio para entrevistado y entrevistador. Las partes de la entrevista sin cifras ni hechos concretos no aparecen.</div>
+</div></details>
 <p>¿Ves un error o tienes una fuente oficial para algo que no hemos podido comprobar? Escríbenos en los comentarios de nuestros vídeos y lo corregimos aquí, con fecha.</p>
-<p style="font-size:14px;opacity:.8">«programa claro» no está vinculado a ningún partido ni al canal The Wild Project. El mismo criterio vale para las entrevistas a los demás candidatos.</p>
-</main><footer><a href="index.html">Inicio</a> · <a href="terminos.html">Términos</a> · <a href="privacidad.html">Privacidad</a> · Última actualización: 16 de noviembre de 2026</footer></body></html>
+<p class="pie">«programa claro» no está vinculado a ningún partido ni al canal The Wild Project. El mismo criterio vale para las entrevistas a los demás candidatos.</p>
+</main><footer><a href="index.html">Inicio</a> · <a href="terminos.html">Términos</a> · <a href="privacidad.html">Privacidad</a> · Última actualización: 16 de noviembre de 2026</footer>
+
+<script>
+const VID='mStOFBvToUI', DUR=6710;
+const ET={si:'Coincide con',no:'No coincide con',nc:'No se puede comprobar',op:'Opinión/promesa: no se contrasta'};
+const CAP=[[0,'Inicio'],[846,'Trenes'],[1845,'Ceuta'],[3090,'Inmigración'],[3690,'Natalidad'],[3840,'Seguridad'],[3920,'Regularización'],[4040,'Corrupción'],[4901,'Rescates SEPI'],[5074,'Vivienda'],[5730,'Hemeroteca'],[6440,'Balance']];
+// e: etiquetas [[clave, calificación, texto tras la etiqueta]]; f: fuentes [[texto, url, calificación]]
+const D=[
+{t:1098,q:'Pedro Sánchez',tema:'trenes',c:'«…de 2026 a 2030 […] vamos a invertir <b>19.000 millones de euros</b> en el mantenimiento y la seguridad de las vías ferroviarias»',e:[['op']],d:['Es un compromiso de inversión futura.'],f:[]},
+{t:1857,q:'Pedro Sánchez',tema:'Ceuta',c:'«Los <b>más de 80.000</b> que el 30 y el 31 de julio entraron en Ceuta»',e:[['no','B']],d:['El ministro del Interior cifró en <b>72.000</b> las personas que entraron en Ceuta el 30 de julio, según Infobae (5-8-2026). No hemos encontrado la cifra en una publicación oficial.'],f:[['Infobae, 5-8-2026','https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/','B']]},
+{t:2114,q:'Pedro Sánchez',tema:'Ceuta',c:'«Tuvimos <b>más de 140 muertos</b>»',e:[['si','B','la ONG Caminando Fronteras'],['no','B','la Delegación del Gobierno en Ceuta']],d:['Caminando Fronteras: al menos <b>141</b> fallecidos.','Delegación del Gobierno en Ceuta: <b>78</b> víctimas encontradas en aguas españolas, en la misma fecha.','Las dos cifras salen de la misma noticia; no hemos encontrado un balance oficial final.'],f:[['Infobae, 5-8-2026','https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/','B']]},
+{t:2478,q:'Pedro Sánchez',tema:'Pegasus',c:'«A mí me <b>hackearon el móvil</b>, lo denuncié ante la Audiencia…»',e:[['nc']],d:['Aún no hemos localizado la nota oficial de la denuncia. La añadiremos cuando la encontremos.'],f:[]},
+{t:2883,q:'Jordi Wild',tema:'Ceuta',c:'«Tardaste <b>25 días</b> aproximadamente en convocar el Consejo de Seguridad Nacional»',e:[['si','B']],d:['La entrada fue el 30 de julio y el Consejo de Seguridad Nacional extraordinario se reunió el martes 25 de agosto de 2026: 26 días después.'],f:[['Qué!, 25-8-2026','https://www.que.es/2026/08/25/consejo-seguridad-nacional-ceuta/','B']]},
+{t:3092,q:'Jordi Wild',tema:'CIS',c:'«La inmigración es una de las mayores causas de preocupación según el CIS […] <b>Vivienda es la número uno</b>, pero inmigración está muy cerca»',e:[['si','A']],d:['CIS de octubre de 2026 (estudio 3582), suma de las tres menciones: <b>la vivienda, 55,7 %</b> (primer problema); <b>la inmigración, 20,9 %</b> (segundo).','«Muy cerca» es una valoración: aquí van las dos cifras.'],f:[['CIS, estudio 3582, pregunta 13R','https://www.cis.es/documents/d/guest/es3582sd_a-pdf','A']]},
+{t:3268,q:'Pedro Sánchez',tema:'inmigración',c:'«Del 100 % de migrantes que nos llegan, <b>el 40 % son europeos</b>. El otro <b>40 % son latinoamericanos</b>»',e:[['nc']],d:['No hemos encontrado una publicación oficial con ese reparto por continentes.'],f:[]},
+{t:3372,q:'Pedro Sánchez',tema:'economía',c:'«El <b>25 % del crecimiento económico</b> […] trae causa del aporte de la migración»',e:[['nc']],d:['No hemos localizado el informe oficial con esa cifra ni el periodo al que se refiere.'],f:[]},
+{t:3703,q:'Pedro Sánchez',tema:'permisos',c:'«Pasar de cinco semanas los permisos de paternidad y maternidad, equipararlos […] <b>a 19 semanas</b>»',e:[['si','A']],d:['El Real Decreto-ley 9/2025 amplía el permiso de nacimiento y cuidado a <b>19 semanas</b> para cada progenitor.'],f:[['BOE, Real Decreto-ley 9/2025','https://www.boe.es/buscar/act.php?id=BOE-A-2025-15741','A']]},
+{t:3856,q:'Pedro Sánchez',tema:'policía',c:'«Durante los años de Mariano Rajoy se recortaron las fuerzas y cuerpos de seguridad del Estado <b>en 15.000 efectivos</b> y <b>hoy hay 180.000</b>»',e:[['nc']],d:['El último dato oficial que hemos encontrado es de junio de 2023: <b>156.400</b> agentes de Policía Nacional y Guardia Civil. No hemos encontrado uno de 2026.'],f:[['La Moncloa, 29-6-2023','https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2023/290623-espana-maximo-historico-agentes-policia.aspx','A']]},
+{t:3926,q:'Pedro Sánchez',tema:'regularización',c:'«Más o menos es <b>1.200.000 personas</b>»',e:[['si','B']],d:['El plazo cerró con <b>1.174.978 solicitudes</b>. Son solicitudes presentadas, no personas ya regularizadas.'],f:[['Iberoeconomía (balance difundido por el Gobierno)','https://www.iberoeconomia.es/inmigracion/regularizacion-de-inmigrantes-en-espana-que-se-sabe-de-las-1-174-978-solicitudes-presentadas/','B']]},
+{t:3935,q:'Pedro Sánchez',tema:'regularización',c:'«<b>Medio millón</b> de ellas ya está trabajando y cotizando a la Seguridad Social»',e:[['si','A']],d:['A finales de octubre de 2026 había <b>490.586</b> afiliados en alta relacionados con la regularización extraordinaria.'],f:[['Ministerio de Inclusión, afiliación de octubre','https://www.inclusion.gob.es/w/la-seguridad-social-supera-los-22-6-millones-de-afiliados-en-octubre-tras-sumar-784.573-afiliados-en-el-ultimo-ano','A']]},
+{t:3977,q:'Pedro Sánchez',tema:'integración',c:'«Poner <b>500 millones de euros</b> encima de la mesa para que los ayuntamientos y las comunidades autónomas…»',e:[['si','A']],d:['El Plan de Integración y Ciudadanía arranca con <b>más de 500 millones de euros</b> el primer año.','La nota no detalla cuánto va a ayuntamientos y comunidades.'],f:[['La Moncloa, 30-6-2026','https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/300626-sanchez-plan-integracion-ciudadania.aspx','A']]},
+{t:4063,q:'Jordi Wild',tema:'corrupción',c:'«En el caso de Ábalos ya <b>condenado, 24 años de cárcel</b>»',e:[['si','B']],d:['El Tribunal Supremo condenó a José Luis Ábalos a 24 años de cárcel (22-6-2026).'],f:[['RTVC, 22-6-2026','https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/','B']]},
+{t:4953,q:'Pedro Sánchez',tema:'rescates',c:'«En las compañías aéreas llegamos a salvar, me parece que son <b>casi 8.500 puestos de trabajo</b>»',e:[['nc']],d:['No hemos encontrado un balance oficial del fondo de rescate con esa cifra.'],f:[]},
+{t:5188,q:'Pedro Sánchez',tema:'vivienda',c:'«El <b>13 %</b> de la vivienda que se ha construido […] han sido viviendas protegidas, <b>más de 150.000</b>»',e:[['nc']],d:['No hemos encontrado una estadística oficial que dé ese porcentaje acumulado para estos años.'],f:[]},
+{t:5395,q:'Jordi Wild',tema:'vivienda',c:'«El 18 de diciembre del 23 te comprometiste a habilitar <b>184.000 viviendas</b> públicas y de alquiler asequible en esta legislatura»',e:[['si','A']],d:['El 18-12-2023 el presidente anunció que se usarían «todos los recursos del Estado para habilitar 184.000 viviendas públicas y de alquiler asequible» durante la legislatura.','Cuántas están entregadas: Sánchez dijo en la entrevista que no tenía el dato; nosotros tampoco hemos encontrado un balance oficial.'],f:[['La Moncloa, 18-12-2023','https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2023/181223-sanchez-casa-arquitectura.aspx','A']]},
+{t:5790,q:'Jordi Wild',tema:'seguridad ciudadana',c:'«Ley mordaza, que en 2015 ya prometiste que la ibas a derogar, estamos en 2026, <b>sigue activa</b>»',e:[['si','A']],d:['La Ley Orgánica 4/2015, de protección de la seguridad ciudadana, sigue vigente en el BOE.'],f:[['BOE, Ley Orgánica 4/2015 (texto consolidado)','https://www.boe.es/buscar/act.php?id=BOE-A-2015-3442','A']]},
+{t:6102,q:'Pedro Sánchez',tema:'Congreso',c:'«En lugar de tener <b>121 escaños</b> como tengo del año 2023…»',e:[['si','A']],d:['El PSOE obtuvo 121 escaños en las elecciones generales del 23 de julio de 2023.'],f:[['Ministerio del Interior, resultados electorales','https://infoelectoral.interior.gob.es','A']]},
+{t:6435,q:'Pedro Sánchez',tema:'salario mínimo',c:'«Dije que iba a <b>subir el salario mínimo</b> interprofesional y lo he subido»',e:[['si','A']],d:['Salario mínimo en 2026: <b>1.221 euros al mes</b> (Real Decreto 126/2026). En 2018 era de 735,90 euros (Real Decreto 1077/2017).'],f:[['BOE, Real Decreto 126/2026','https://www.boe.es/eli/es/rd/2026/02/18/126/con','A']]},
+{t:6440,q:'Pedro Sánchez',tema:'pensiones',c:'«Dije que iba a regularizar <b>las pensiones conforme al IPC</b> y lo he hecho»',e:[['si','A']],d:['La Ley 21/2021 fija que las pensiones se revalorizan cada año según el IPC medio.'],f:[['BOE, Ley 21/2021','https://www.boe.es/buscar/act.php?id=BOE-A-2021-21652','A']]},
+{t:6445,q:'Pedro Sánchez',tema:'balance',c:'«Dije que iba a apostar por la educación pública […] por la sanidad pública y lo he hecho»',e:[['op']],d:['«Apostar por» no es una cifra ni un hecho concreto que se pueda medir.'],f:[]},
+{t:6453,q:'Pedro Sánchez',tema:'defensa',c:'«Le dije al señor Trump que <b>no al 5 %</b> del presupuesto en defensa y lo he mantenido»',e:[['si','B']],d:['El Gobierno comunicó a la OTAN que España no llegará al 5 % del PIB en defensa.'],f:[['RTVC','https://rtvc.es/sanchez-comunica-a-la-otan-que-no-subira-el-gasto-en-defensa-hasta-el-5/','B']]}
+];
+const hms=s=>{s=Math.floor(s);const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=String(s%60).padStart(2,'0');return h?`${h}:${String(m).padStart(2,'0')}:${x}`:`${m}:${x}`};
+const clase=x=>x.e.length>1?'mx':x.e[0][0];
+const etiquetas=x=>x.e.map(([k,c,txt])=>`<span class="e ${k}">${ET[k]}</span>${txt?` ${txt} `:''}${c?`<span class="n${c==='B'?' b':''}">${c}</span>`:''}`).join('<br>');
+const cuerpo=x=>`<div class="q">${x.c}</div>${etiquetas(x)}<ul class="det">${x.d.map(l=>`<li>${l}</li>`).join('')}</ul>`+
+ (x.f.length?`<div class="fu">Fuente: ${x.f.map(([t,u,c])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`+(x.e.length>1||x.e[0][1]?'':` <span class="n${c==='B'?' b':''}">${c}</span>`)).join(' · ')}</div>`:'');
+const boton=t=>`<a class="t" href="https://www.youtube.com/watch?v=${VID}&t=${t}s" data-t="${t}">▶ ${hms(t)}</a>`;
+
+// lista completa
+const lista=document.getElementById('lista');
+lista.innerHTML=D.map((x,i)=>`<article class="c" id="d${i}" data-i="${i}" data-k="${x.e.map(e=>e[0]).join(' ')}"><div class="m">${boton(x.t)}<span>${x.q} · ${x.tema}</span></div>${cuerpo(x)}</article>`).join('');
+
+// filtros
+const F=[['todo','Todo'],['si',ET.si],['no',ET.no],['nc',ET.nc],['op','Opinión/promesa'],['Pedro Sánchez','Sánchez'],['Jordi Wild','Wild']];
+const fil=document.getElementById('filtros');
+fil.innerHTML=F.map(([k,t])=>`<button data-f="${k}" aria-pressed="${k==='todo'}">${t} (${k==='todo'?D.length:D.filter(x=>x.q===k||x.e.some(e=>e[0]===k)).length})</button>`).join('');
+fil.onclick=ev=>{const b=ev.target.closest('button');if(!b)return;fil.querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));
+ const k=b.dataset.f;D.forEach((x,i)=>document.getElementById('d'+i).classList.toggle('oculta',!(k==='todo'||x.q===k||x.e.some(e=>e[0]===k))));};
+
+// resumen
+const n=k=>D.filter(x=>x.e.length===1&&x.e[0][0]===k).length, mx=D.filter(x=>x.e.length>1).length;
+const contr=D.filter(x=>x.e.some(e=>e[0]==='si'||e[0]==='no')), nA=contr.filter(x=>x.e[0][1]==='A').length;
+document.getElementById('resumen').innerHTML=`${D.length} afirmaciones (${D.filter(x=>x.q==='Pedro Sánchez').length} de Pedro Sánchez y ${D.filter(x=>x.q==='Jordi Wild').length} de Jordi Wild): <b>${n('si')}</b> coinciden con la fuente, <b>${n('no')}</b> no coincide, <b>${mx}</b> coincide con una fuente y no con otra, <b>${n('nc')}</b> no se pueden comprobar y <b>${n('op')}</b> son opinión o promesa. De las ${contr.length} contrastadas, ${nA} con fuente oficial (A) y ${contr.length-nA} con noticias (B).`;
+
+// línea de tiempo
+let dur=DUR;
+const caps=document.getElementById('capitulos'), marcas=document.getElementById('marcas'), burbuja=document.getElementById('burbuja');
+function dibujarLinea(){
+ caps.innerHTML=CAP.map(([t,nm],i)=>`<span data-t="${t}" title="${nm} · ${hms(t)}" style="left:${t/dur*100}%;width:${((CAP[i+1]?CAP[i+1][0]:dur)-t)/dur*100}%"></span>`).join('');
+ marcas.innerHTML=D.map((x,i)=>`<button class="marca ${clase(x)}" data-t="${x.t}" data-i="${i}" style="left:${x.t/dur*100}%" aria-label="${hms(x.t)} ${x.tema}"></button>`).join('');
+}
+dibujarLinea();
+marcas.addEventListener('mouseover',ev=>{const b=ev.target.closest('.marca');if(!b)return;const x=D[b.dataset.i];
+ burbuja.textContent=`${hms(x.t)} · ${x.tema} · ${x.e.length>1?'Dos fuentes':ET[x.e[0][0]]}`;burbuja.style.left=b.style.left;burbuja.style.display='block'});
+marcas.addEventListener('mouseout',()=>burbuja.style.display='none');
+
+// reproductor (API de YouTube): los minutos saltan en el mismo vídeo
+let yt=null, listo=false;
+const tag=document.createElement('script');tag.src='https://www.youtube.com/iframe_api';document.head.appendChild(tag);
+window.onYouTubeIframeAPIReady=()=>{yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com',videoId:VID,
+ playerVars:{rel:0,playsinline:1,modestbranding:1},events:{onReady:()=>{listo=true;const d=yt.getDuration();if(d>0){dur=d;dibujarLinea();}}}})};
+function ir(t){
+ if(!listo)return false;
+ yt.seekTo(t,true);yt.playVideo();actualizar(t);
+ if(innerWidth<980)document.querySelector('.izq').scrollIntoView({behavior:'smooth',block:'start'});
+ return true;
+}
+document.addEventListener('click',ev=>{
+ const a=ev.target.closest('[data-t]');if(!a||!a.closest('.c,.linea'))return;
+ if(ir(+a.dataset.t))ev.preventDefault();
+});
+document.getElementById('linea').addEventListener('click',ev=>{
+ if(ev.target.closest('.marca')||ev.target.closest('.capitulos span'))return;
+ const r=ev.currentTarget.getBoundingClientRect();ir((ev.clientX-r.left)/r.width*dur);
+});
+
+// panel «Ahora» y seguimiento de la lista
+const ahora=document.getElementById('ahora'), der=document.getElementById('der');
+let actual=-2, tocadoLista=0;
+der.addEventListener('wheel',()=>tocadoLista=Date.now(),{passive:true});
+der.addEventListener('touchmove',()=>tocadoLista=Date.now(),{passive:true});
+function pintarAhora(i,t){
+ if(i<0){const x=D[0];ahora.innerHTML=`<div class="titulo"><span>Primer dato</span><span>en ${hms(x.t)}</span></div><div class="m" style="margin-top:6px">${boton(x.t)}<span>${x.q} · ${x.tema}</span></div><div class="q">${x.c}</div>`;return}
+ const x=D[i], s=D[i+1];
+ ahora.innerHTML=`<div class="titulo"><span>Último dato dicho</span><span>${i+1} de ${D.length}</span></div><div class="m" style="margin-top:6px">${boton(x.t)}<span>${x.q} · ${x.tema}</span></div>${cuerpo(x)}`+
+  (s?`<div class="sig">Siguiente: ${s.tema} en ${hms(s.t)} (${s.t-t>0?'dentro de '+hms(s.t-t):'ya'})</div>`:'<div class="sig">No hay más datos contrastables después de este.</div>');
+}
+function actualizar(t){
+ const p=Math.min(t/dur*100,100);
+ document.getElementById('progreso').style.width=p+'%';document.getElementById('cabezal').style.left=p+'%';
+ document.getElementById('reloj').textContent=`${hms(t)} / ${hms(dur)}`;
+ let c=0;CAP.forEach(([ct],k)=>{if(ct<=t)c=k});document.getElementById('capitulo').textContent=CAP[c][1];
+ let i=-1;D.forEach((x,k)=>{if(x.t<=t+1)i=k});
+ if(i!==actual){
+  actual=i;
+  D.forEach((x,k)=>{const el=document.getElementById('d'+k);el.classList.toggle('activa',k===i);el.classList.toggle('pasada',k<i)});
+  marcas.querySelectorAll('.marca').forEach(m=>m.classList.toggle('activa',+m.dataset.i===i));
+  if(i>=0&&innerWidth>=980&&Date.now()-tocadoLista>8000){const el=document.getElementById('d'+i);der.scrollTo({top:el.offsetTop-der.offsetTop-52,behavior:'smooth'})}
+ }
+ pintarAhora(i,t);
+}
+actualizar(0);
+setInterval(()=>{if(listo&&yt.getPlayerState&&yt.getPlayerState()===1)actualizar(yt.getCurrentTime())},500);
+</script>
+</body></html>
